@@ -11,8 +11,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html {
     font-size: 62.5%;
+}
+
+:root {
+    --main-color: #CF4C3E;
+    --secondary-color: #A5554C;
+    --secondary-color: #F93520;
+    --secondary-color: #7A524D;
+    --secondary-color: #504140;
+    --secondary-color: #504140;
+
 }
