@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    list-style-type: none;
 }
 
 html {
@@ -21,9 +21,123 @@ html {
 :root {
     --main-color: #CF4C3E;
     --secondary-color: #A5554C;
-    --secondary-color: #F93520;
-    --secondary-color: #7A524D;
-    --secondary-color: #504140;
-    --secondary-color: #504140;
+    --tertiary-color: #F93520;
+    --quaternary-color: #7A524D;
+    --dark-primary-color: #504140;
+    --dark-secondary-color: #504140;
+}
 
+header .container {
+    width: 100%;
+    height: 6rem;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+header .container h3 {
+    font-size: 2.5rem;
+    margin: 1rem 2rem;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin: 1rem 1rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: all .3s ease;
+}
+
+header li:hover {
+    font-size: 2rem;
+}
+
+header .container button {
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    margin: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: withe;
+    color: var(--dark-secondary-color);
+    cursor: pointer;
+    transition: all .3 ease;
+}
+
+header .container button:hover {
+    background-color: var(--dark-secondary-color);
+    color: white;
+}
+
+.arrows {
+    position: absolute;
+    height: 100%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20rem;
+    color: var(--secondary-color);
+    transition: all .4s ease;
+}
+
+.arrow {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all .4s ease;
+}
+
+.arrow:hover {
+    font-size: 22rem;
+    opacity: 1;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 8vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+section .container {
+    width: 75%;
+    box-shadow: 0.5rem 0.5rem 1rem .5rem rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+}
+
+section .container img {
+    float: right;
+    width: 70rem;
+    margin: 2rem;
+}
+
+section h2 {
+    font-size: 4rem;
+    margin: 2rem 0;
+    color: var(--secondary-color);
+}
+
+section .container h3 {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+section .container p {
+    font-size: 2rem;
+    margin: 2rem auto;
+    line-height: 2.2rem;
 }
