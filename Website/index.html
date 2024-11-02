@@ -15,12 +15,12 @@
         <div class="container">
             <h3>Palco Virtual</h3>
             <ul>
-                <li>HOME</li>
-                <li>HISTÓRIA</li>
-                <li>MONÔLOGOS</li>
-                <li>POEMAS</li>
-                <li>QUIZ</li>
-                <li>ÁREA SECRETA</li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#historia">HISTÓRIA</a></li>
+                <li><a href="#monologos">MONÔLOGOS</a></li>
+                <li><a href="#poemas">POEMAS</a></li>
+                <li><a href="#quiz">QUIZ</a></li>
+                <li><a href="#area_secreta">ÁREA SECRETA</a></li>
             </ul>
             <div class="login">
                 <button>Login</button>
@@ -28,7 +28,7 @@
         </div>
     </header>
     <main>
-        <section>
+        <section id="historia">
             <div class="arrows">
                 <div class="arrow left-arrow"><i class="fa-solid fa-chevron-left" onclick="changeSlideHistoria(-1)"></i>
                 </div>
@@ -36,17 +36,20 @@
                         onclick="changeSlideHistoria(1)"></i>
                 </div>
             </div>
-            <h2>HISTÓRIA</h2>
+            <h2 onclick="circleButtonHistória(index)">HISTÓRIA</h2>
             <div class="circles">
-                <div class="circle active"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+                <div class="circle active" onclick="circleButtonHistória(0)"></div>
+                <div class="circle" onclick="circleButtonHistória(1)"></div>
+                <div class="circle" onclick="circleButtonHistória(2)"></div>
+                <div class="circle" onclick="circleButtonHistória(3)"></div>
+                <div class="circle" onclick="circleButtonHistória(4)"></div>
             </div>
             <div class="container historia active">
                 <h3>O primeiro Ator</h3>
-                <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
+                <figure>
+                    <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
+                    <figcaption>Gravura de um anfiteatro grego</figcaption>
+                </figure>
                 <p>Thespis, o primeiro ator da história, revolucionou o teatro na Grécia Antiga, aproximadamente no
                     século
                     VI a.C. Originário da região de Ática, Thespis ganhou destaque por introduzir uma nova dimensão às
@@ -105,256 +108,264 @@
                     meio ao coro da história.</p>
             </div>
             <div class="container historia">
-                <h3>O Segundo Ator</h3>
-                <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
-                <p>Thespis, o primeiro ator da história, revolucionou o teatro na Grécia Antiga, aproximadamente no
-                    século
-                    VI a.C. Originário da região de Ática, Thespis ganhou destaque por introduzir uma nova dimensão às
-                    apresentações dramáticas, transformando-se no precursor do teatro ocidental.</p>
+                <h3>William Shakespeare</h3>
+                <figure>
+                    <img src="./assets/images/história/shakespeare.jpg" alt="Imagem de William Shakespeare">
+                    <figcaption>William Shakespeare</figcaption>
+                </figure>
+                <p>William Shakespeare, nascido em 1564, é um dos mais icônicos dramaturgos da literatura mundial. Suas
+                    obras, que se dividem em tragédias, comédias e histórias, não só refletem sua genialidade literária,
+                    mas também seu profundo entendimento da condição humana.</p>
 
-                <p>Antes de Thespis, as apresentações dramáticas eram dominadas pelos coros, que cantavam e dançavam em
-                    homenagem aos deuses, especialmente Dionísio, o deus do vinho e do teatro. As narrativas eram
-                    contadas
-                    coletivamente, sem a presença de um personagem individualizado. Thespis, no entanto, ousou desafiar
-                    essa
-                    tradição e trouxe uma inovação que mudaria para sempre a face do teatro.</p>
+                <p>Entre as tragédias de Shakespeare, "Hamlet" se destaca como uma das mais influentes. Nesta peça, o
+                    príncipe Hamlet busca vingança pela morte de seu pai, enfrentando dilemas existenciais que ressoam
+                    até os dias de hoje. "Macbeth" explora a ambição desenfreada, mostrando a ascensão e queda de um
+                    nobre escocês influenciado por profecias e sua esposa implacável. "Otelo" mergulha nos temas da
+                    inveja e traição, onde o protagonista é levado à tragédia pelo manipulador Iago.</p>
 
-                <p>Diz a lenda que Thespis separou-se do coro, adotando uma máscara e um manto para representar um
-                    personagem distinto. Essa separação permitiu-lhe dialogar diretamente com o coro, introduzindo a
-                    troca
-                    de falas e o desenvolvimento de um enredo mais dinâmico. Este novo papel de "ator" dava-lhe a
-                    capacidade
-                    de interpretar várias personagens, transformando-se em diferentes indivíduos ao longo da narrativa.
-                </p>
+                <p>Shakespeare também foi mestre em comédias. "Sonho de uma Noite de Verão" mistura realidade e
+                    fantasia, onde quatro amantes perdidos numa floresta encontram seres mágicos. "Muito Barulho por
+                    Nada" é conhecida por seus diálogos espirituosos e o enredo de disfarces e mal-entendidos. "A Megera
+                    Domada" desafia as normas de gênero e poder através da transformação da indomável Catarina.</p>
 
-                <p>A invenção da máscara foi fundamental para essa transição. Com a máscara, Thespis pôde ocultar sua
-                    identidade, assumindo plenamente a persona do personagem que representava. A máscara não só permitia
-                    a
-                    mudança de identidade, mas também amplificava a voz do ator, crucial para ser ouvido em grandes
-                    anfiteatros. Essa prática inovadora fez com que as peças ganhassem uma nova dimensão de profundidade
-                    e
-                    complexidade.</p>
+                <p>Nas histórias históricas, Shakespeare dramatiza a vida de reis ingleses, oferecendo tanto
+                    entretenimento quanto lições históricas. "Henrique V" narra a transformação de um jovem príncipe em
+                    um líder guerreiro, enquanto "Ricardo III" apresenta a ascensão implacável de um dos vilões mais
+                    memoráveis da literatura. Essas peças capturam a complexidade da política e do poder, temas centrais
+                    na obra de Shakespeare.</p>
 
-                <p>A ousadia de Thespis não passou despercebida. Ele logo se tornou uma figura central nas competições
-                    dramáticas realizadas durante os festivais dionisíacos, que atraíam público de toda a Grécia. Sua
-                    habilidade de cativar a audiência e dar vida a personagens mitológicos e históricos lhe rendeu
-                    grande
-                    aclamação. Conta-se que em 534 a.C., durante a Grande Dionísia, Thespis foi premiado por suas
-                    performances, consolidando seu legado como o primeiro ator da história.</p>
+                <p>Além das peças, os sonetos de Shakespeare são essenciais para entender sua obra. Com 154 sonetos ao
+                    todo, ele explora temas como amor, beleza, mortalidade e o passageiro do tempo. Poemas como "Shall I
+                    compare thee to a summer's day?" permanecem entre os mais citados na literatura, demonstrando sua
+                    habilidade em capturar a essência das emoções humanas.</p>
 
-                <p> A influência de Thespis foi profunda e duradoura. Ele estabeleceu as bases para o desenvolvimento do
-                    teatro grego clássico, influenciando dramaturgos como Ésquilo, Sófocles e Eurípides, que continuaram
-                    a
-                    expandir e refinar a arte da interpretação e do drama. A introdução do ator e da máscara permitiu o
-                    surgimento de diálogos mais complexos, conflitos internos e uma exploração mais rica das emoções
-                    humanas.</p>
+                <p>O impacto de Shakespeare na língua inglesa é incomparável. Ele criou inúmeras palavras e expressões
+                    que ainda usamos hoje. Suas obras foram traduzidas para todas as principais línguas e continuam a
+                    ser encenadas globalmente, influenciando a arte e a cultura em todas as formas. Seu talento para
+                    revelar as profundezas da alma humana através do teatro e da poesia garante seu lugar perpétuo na
+                    história literária.</p>
 
-                <p> Além de sua inovação técnica, Thespis também desempenhou um papel simbólico. Ele personificou a
-                    transformação do teatro em uma forma de arte que não apenas entretinha, mas também provocava
-                    reflexão e
-                    introspecção. Suas performances mostravam a capacidade do teatro de explorar a condição humana, os
-                    dilemas morais e as interações sociais, temas que continuam a ressoar nos palcos contemporâneos.
-                </p>
+                <p>Assim, o legado de William Shakespeare é imortal. Suas obras não apenas definiram a dramaturgia e a
+                    poesia, mas também proporcionaram um espelho atemporal para a condição humana, explorando as
+                    paixões, ambições e fraquezas que nos fazem quem somos. Seus textos continuam a inspirar e desafiar,
+                    garantindo que Shakespeare permaneça uma figura central na literatura mundial.</p>
 
-                <p>Thespis, portanto, não foi apenas o primeiro ator; ele foi um visionário que viu o potencial do
-                    teatro para transcender os limites da performance coletiva e mergulhar nas profundezas da
-                    individualidade e da narrativa pessoal. Sua inovação pavimentou o caminho para o teatro como o
-                    conhecemos hoje, tornando-se uma referência eterna na história das artes dramáticas. Assim, Thespis
-                    permanece uma figura icônica, lembrada não apenas como o primeiro a pisar no palco como ator, mas
-                    como um pioneiro que libertou a narrativa dramática, permitindo que vozes individuais ressoassem em
-                    meio ao coro da história.</p>
             </div>
             <div class="container historia">
-                <h3>O Terceiro Ator</h3>
-                <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
-                <p>Thespis, o primeiro ator da história, revolucionou o teatro na Grécia Antiga, aproximadamente no
-                    século
-                    VI a.C. Originário da região de Ática, Thespis ganhou destaque por introduzir uma nova dimensão às
-                    apresentações dramáticas, transformando-se no precursor do teatro ocidental.</p>
+                <h3>Comédia Dell'Arte</h3>
+                <figure>
+                    <img src="./assets/images/história/comedia_dell_arte.jpg"
+                        alt="Pintura de uma peça de comédia dell' arte">
+                    <figcaption>Pintura de uma peça de comédia Dell'Arte</figcaption>
+                </figure>
+                <p>A Comédia dell'Arte, originada na Itália no século XVI, é um gênero teatral conhecido por seu estilo
+                    improvisado e seus personagens típicos. Esta forma de teatro popularizou-se rapidamente pela Europa,
+                    deixando uma marca duradoura na arte cênica. Suas raízes podem ser encontradas nas tradições dos
+                    bufões e nos festivais populares da Idade Média, evoluindo para um espetáculo mais estruturado, mas
+                    ainda profundamente enraizado na improvisação.</p>
 
-                <p>Antes de Thespis, as apresentações dramáticas eram dominadas pelos coros, que cantavam e dançavam em
-                    homenagem aos deuses, especialmente Dionísio, o deus do vinho e do teatro. As narrativas eram
-                    contadas
-                    coletivamente, sem a presença de um personagem individualizado. Thespis, no entanto, ousou desafiar
-                    essa
-                    tradição e trouxe uma inovação que mudaria para sempre a face do teatro.</p>
+                <p>Um dos elementos mais distintivos da Comédia dell'Arte são os seus personagens arquetípicos, como
+                    Arlecchino (Arlequim), Pantalone, Il Dottore e Columbina. Esses personagens eram frequentemente
+                    representados por meio de máscaras e figurinos específicos, que permitiam ao público reconhecê-los
+                    instantaneamente. Cada personagem possuía características e maneirismos próprios, criando um
+                    repertório de figuras cômicas que podiam ser adaptadas a diferentes histórias.</p>
 
-                <p>Diz a lenda que Thespis separou-se do coro, adotando uma máscara e um manto para representar um
-                    personagem distinto. Essa separação permitiu-lhe dialogar diretamente com o coro, introduzindo a
-                    troca
-                    de falas e o desenvolvimento de um enredo mais dinâmico. Este novo papel de "ator" dava-lhe a
-                    capacidade
-                    de interpretar várias personagens, transformando-se em diferentes indivíduos ao longo da narrativa.
-                </p>
+                <p>Arlecchino, por exemplo, é conhecido por sua agilidade física e astúcia, frequentemente envolvido em
+                    intrigas amorosas e mal-entendidos cômicos. Ele vestia uma roupa colorida e remendada, simbolizando
+                    sua esperteza e habilidade de sobreviver nas situações mais difíceis. Pantalone, por outro lado, era
+                    um velho avarento e luxurioso, sempre perseguindo jovens mulheres e tentando proteger sua fortuna.
+                    Esses contrastes entre os personagens contribuíam para o humor e a dinâmica das apresentações.</p>
 
-                <p>A invenção da máscara foi fundamental para essa transição. Com a máscara, Thespis pôde ocultar sua
-                    identidade, assumindo plenamente a persona do personagem que representava. A máscara não só permitia
-                    a
-                    mudança de identidade, mas também amplificava a voz do ator, crucial para ser ouvido em grandes
-                    anfiteatros. Essa prática inovadora fez com que as peças ganhassem uma nova dimensão de profundidade
-                    e
-                    complexidade.</p>
+                <p>A improvisação era a alma da Comédia dell'Arte. Embora houvesse roteiros básicos, conhecidos como
+                    "canovacci", os atores tinham a liberdade de improvisar diálogos e ações, respondendo ao ambiente e
+                    às reações do público. Isso exigia grande habilidade e criatividade dos atores, que deviam ser
+                    capazes de manter a narrativa enquanto incorporavam elementos espontâneos e surpreendentes. Essa
+                    abordagem dinâmica fez com que cada performance fosse única.</p>
 
-                <p>A ousadia de Thespis não passou despercebida. Ele logo se tornou uma figura central nas competições
-                    dramáticas realizadas durante os festivais dionisíacos, que atraíam público de toda a Grécia. Sua
-                    habilidade de cativar a audiência e dar vida a personagens mitológicos e históricos lhe rendeu
-                    grande
-                    aclamação. Conta-se que em 534 a.C., durante a Grande Dionísia, Thespis foi premiado por suas
-                    performances, consolidando seu legado como o primeiro ator da história.</p>
+                <p>As companhias de Comédia dell'Arte eram muitas vezes itinerantes, viajando de cidade em cidade para
+                    apresentar seus espetáculos. Essas trupes incluíam famílias inteiras, com atores de várias gerações
+                    contribuindo para a continuidade e evolução do gênero. As performances ocorriam em praças públicas,
+                    feiras e teatros improvisados, tornando o teatro acessível a todas as classes sociais.</p>
 
-                <p> A influência de Thespis foi profunda e duradoura. Ele estabeleceu as bases para o desenvolvimento do
-                    teatro grego clássico, influenciando dramaturgos como Ésquilo, Sófocles e Eurípides, que continuaram
-                    a
-                    expandir e refinar a arte da interpretação e do drama. A introdução do ator e da máscara permitiu o
-                    surgimento de diálogos mais complexos, conflitos internos e uma exploração mais rica das emoções
-                    humanas.</p>
+                <p>A influência da Comédia dell'Arte estendeu-se além da Itália, impactando a dramaturgia em países como
+                    França e Inglaterra. Molière, um dos grandes dramaturgos franceses, incorporou elementos da Comédia
+                    dell'Arte em suas peças, e a própria estrutura cômica pode ser vista nas obras de Shakespeare. A
+                    Comédia dell'Arte ajudou a moldar a comédia moderna, estabelecendo padrões e técnicas que ainda são
+                    utilizados hoje.</p>
 
-                <p> Além de sua inovação técnica, Thespis também desempenhou um papel simbólico. Ele personificou a
-                    transformação do teatro em uma forma de arte que não apenas entretinha, mas também provocava
-                    reflexão e
-                    introspecção. Suas performances mostravam a capacidade do teatro de explorar a condição humana, os
-                    dilemas morais e as interações sociais, temas que continuam a ressoar nos palcos contemporâneos.
-                </p>
+                <p>Apesar de seu declínio no século XVIII, a Comédia dell'Arte deixou um legado duradouro. No século XX,
+                    muitos artistas e estudiosos redescobriram e revitalizaram esse estilo teatral. Companhias de teatro
+                    contemporâneas continuam a explorar as técnicas de improvisação e os personagens arquetípicos da
+                    Comédia dell'Arte, mantendo viva a tradição e adaptando-a aos contextos modernos.</p>
 
-                <p>Thespis, portanto, não foi apenas o primeiro ator; ele foi um visionário que viu o potencial do
-                    teatro para transcender os limites da performance coletiva e mergulhar nas profundezas da
-                    individualidade e da narrativa pessoal. Sua inovação pavimentou o caminho para o teatro como o
-                    conhecemos hoje, tornando-se uma referência eterna na história das artes dramáticas. Assim, Thespis
-                    permanece uma figura icônica, lembrada não apenas como o primeiro a pisar no palco como ator, mas
-                    como um pioneiro que libertou a narrativa dramática, permitindo que vozes individuais ressoassem em
-                    meio ao coro da história.</p>
+                <p>Assim, a Comédia dell'Arte permanece uma parte vital da história do teatro. Seu impacto é evidente na
+                    forma como entendemos e praticamos a comédia hoje. A mistura de improvisação, caracterização forte e
+                    interação com o público estabeleceu um modelo que continua a inspirar e divertir plateias em todo o
+                    mundo, garantindo que o espírito da Comédia dell'Arte nunca se perca.</p>
+
             </div>
             <div class="container historia">
-                <h3>O Quarto Ator</h3>
-                <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
-                <p>Thespis, o primeiro ator da história, revolucionou o teatro na Grécia Antiga, aproximadamente no
-                    século
-                    VI a.C. Originário da região de Ática, Thespis ganhou destaque por introduzir uma nova dimensão às
-                    apresentações dramáticas, transformando-se no precursor do teatro ocidental.</p>
+                <h3>Teatro do Absurdo</h3>
+                <figure>
+                    <img src="./assets/images/história/godot.jpg" alt="Peça teatral esperando Godot de Samuel Beckett">
+                    <figcaption>Esperando Godot de Samuel Beckett</figcaption>
+                </figure>
+                <p>O Teatro do Absurdo é um movimento teatral que surgiu na década de 1950 e 1960, caracterizado por sua
+                    abordagem não convencional e suas tramas aparentemente sem sentido. Inspirado pelos horrores da
+                    Segunda Guerra Mundial e pelo sentimento de desilusão com a condição humana, este estilo teatral
+                    desafia a lógica tradicional e explora a alienação, o desespero e a busca por significado em um
+                    mundo caótico. Entre os mais proeminentes dramaturgos deste movimento estão Samuel Beckett e Eugène
+                    Ionesco.</p>
 
-                <p>Antes de Thespis, as apresentações dramáticas eram dominadas pelos coros, que cantavam e dançavam em
-                    homenagem aos deuses, especialmente Dionísio, o deus do vinho e do teatro. As narrativas eram
-                    contadas
-                    coletivamente, sem a presença de um personagem individualizado. Thespis, no entanto, ousou desafiar
-                    essa
-                    tradição e trouxe uma inovação que mudaria para sempre a face do teatro.</p>
+                <p>Samuel Beckett é amplamente reconhecido como uma das figuras centrais do Teatro do Absurdo. Sua
+                    obra-prima "Esperando Godot" (1953) é um marco do gênero, apresentando dois personagens, Vladimir e
+                    Estragon, que esperam inutilmente por alguém chamado Godot. A peça é uma meditação sobre a
+                    incerteza, o tempo e a condição humana, onde o diálogo repetitivo e a falta de ação concreta
+                    refletem o vazio existencial. "Fim de Jogo" (1957) é outra obra importante de Beckett, explorando
+                    temas semelhantes em um ambiente pós-apocalíptico.</p>
 
-                <p>Diz a lenda que Thespis separou-se do coro, adotando uma máscara e um manto para representar um
-                    personagem distinto. Essa separação permitiu-lhe dialogar diretamente com o coro, introduzindo a
-                    troca
-                    de falas e o desenvolvimento de um enredo mais dinâmico. Este novo papel de "ator" dava-lhe a
-                    capacidade
-                    de interpretar várias personagens, transformando-se em diferentes indivíduos ao longo da narrativa.
-                </p>
+                <p>Eugène Ionesco, outro gigante do Teatro do Absurdo, trouxe uma abordagem distinta ao movimento com
+                    seu uso do surrealismo e do cômico. Em "A Cantora Careca" (1950), Ionesco parodia a futilidade da
+                    comunicação humana, apresentando diálogos absurdos entre personagens sem nexo. "O Rinoceronte"
+                    (1959) é uma das suas obras mais conhecidas, onde os habitantes de uma cidade se transformam
+                    gradualmente em rinocerontes, uma metáfora poderosa sobre a conformidade e a perda da
+                    individualidade.</p>
 
-                <p>A invenção da máscara foi fundamental para essa transição. Com a máscara, Thespis pôde ocultar sua
-                    identidade, assumindo plenamente a persona do personagem que representava. A máscara não só permitia
-                    a
-                    mudança de identidade, mas também amplificava a voz do ator, crucial para ser ouvido em grandes
-                    anfiteatros. Essa prática inovadora fez com que as peças ganhassem uma nova dimensão de profundidade
-                    e
-                    complexidade.</p>
+                <p>O trabalho de Beckett e Ionesco é marcado pela desconstrução de formas e estruturas teatrais
+                    tradicionais. Eles desafiaram as convenções do teatro narrativo e da lógica, criando obras que
+                    forçavam o público a confrontar a irracionalidade e o absurdo da existência. Suas peças
+                    frequentemente apresentam personagens que enfrentam dilemas existenciais, dialogando de maneira
+                    repetitiva e incoerente, refletindo o caos interno e externo.</p>
 
-                <p>A ousadia de Thespis não passou despercebida. Ele logo se tornou uma figura central nas competições
-                    dramáticas realizadas durante os festivais dionisíacos, que atraíam público de toda a Grécia. Sua
-                    habilidade de cativar a audiência e dar vida a personagens mitológicos e históricos lhe rendeu
-                    grande
-                    aclamação. Conta-se que em 534 a.C., durante a Grande Dionísia, Thespis foi premiado por suas
-                    performances, consolidando seu legado como o primeiro ator da história.</p>
+                <p>Além de Beckett e Ionesco, outros dramaturgos contribuíram para o Teatro do Absurdo, incluindo Harold
+                    Pinter, cujas peças como "O Aniversário" (1957) e "O Porteiro" (1959) exploram a ameaça e a paranoia
+                    em cenários cotidianos. A influência destes autores pode ser vista em trabalhos posteriores que
+                    continuaram a desafiar e a expandir os limites do teatro.</p>
 
-                <p> A influência de Thespis foi profunda e duradoura. Ele estabeleceu as bases para o desenvolvimento do
-                    teatro grego clássico, influenciando dramaturgos como Ésquilo, Sófocles e Eurípides, que continuaram
-                    a
-                    expandir e refinar a arte da interpretação e do drama. A introdução do ator e da máscara permitiu o
-                    surgimento de diálogos mais complexos, conflitos internos e uma exploração mais rica das emoções
-                    humanas.</p>
+                <p>O Teatro do Absurdo não apenas revolucionou a dramaturgia, mas também provocou reflexões profundas
+                    sobre a natureza da existência e do teatro em si. Através de narrativas fragmentadas e diálogos
+                    desconcertantes, este movimento levou o público a questionar a realidade e a buscar novos
+                    significados na aparente falta de sentido do mundo moderno.</p>
 
-                <p> Além de sua inovação técnica, Thespis também desempenhou um papel simbólico. Ele personificou a
-                    transformação do teatro em uma forma de arte que não apenas entretinha, mas também provocava
-                    reflexão e
-                    introspecção. Suas performances mostravam a capacidade do teatro de explorar a condição humana, os
-                    dilemas morais e as interações sociais, temas que continuam a ressoar nos palcos contemporâneos.
-                </p>
+                <p>A força do Teatro do Absurdo reside na sua capacidade de provocar desconforto e introspecção. Ao
+                    romper com as expectativas tradicionais do teatro, ele convidou os espectadores a uma jornada
+                    introspectiva, desafiando-os a encontrar significado no absurdo. Este movimento continua a inspirar
+                    e a influenciar dramaturgos e diretores, mantendo-se relevante e impactante.</p>
 
-                <p>Thespis, portanto, não foi apenas o primeiro ator; ele foi um visionário que viu o potencial do
-                    teatro para transcender os limites da performance coletiva e mergulhar nas profundezas da
-                    individualidade e da narrativa pessoal. Sua inovação pavimentou o caminho para o teatro como o
-                    conhecemos hoje, tornando-se uma referência eterna na história das artes dramáticas. Assim, Thespis
-                    permanece uma figura icônica, lembrada não apenas como o primeiro a pisar no palco como ator, mas
-                    como um pioneiro que libertou a narrativa dramática, permitindo que vozes individuais ressoassem em
-                    meio ao coro da história.</p>
+                <p>Assim, o legado do Teatro do Absurdo permanece vivo, refletindo a complexidade e o mistério da
+                    condição humana. As obras de Beckett, Ionesco e seus contemporâneos continuam a ser encenadas e
+                    estudadas, demonstrando o poder do teatro de transformar a percepção e de explorar as profundezas do
+                    absurdo e da existência.</p>
+
             </div>
             <div class="container historia">
-                <h3>O Quinto Ator</h3>
-                <img src="./assets/images/história/primeiro_ator.jpg" alt="Gravura de um teatro grego antigo">
-                <p>Thespis, o primeiro ator da história, revolucionou o teatro na Grécia Antiga, aproximadamente no
-                    século
-                    VI a.C. Originário da região de Ática, Thespis ganhou destaque por introduzir uma nova dimensão às
-                    apresentações dramáticas, transformando-se no precursor do teatro ocidental.</p>
+                <h3>Constantin Stanislavski</h3>
+                <figure>
+                    <img src="./assets/images/história/Stanislaviski.jpg" alt="Constantin Stanislaviski">
+                    <figcaption>Constantin Stanislavski</figcaption>
+                </figure>
+                <p>Constantin Stanislavski, nascido em 1863 em Moscou, Rússia, é considerado um dos maiores teóricos e
+                    praticantes do teatro moderno. Criador do "Sistema Stanislavski", ele revolucionou a arte de
+                    interpretar, transformando-a em um processo profundo e autêntico. Stanislavski nasceu em uma família
+                    rica e desde cedo foi exposto ao mundo das artes. Seu verdadeiro nome era Konstantin Sergeievich
+                    Alekseiev, mas adotou o sobrenome Stanislavski como seu nome artístico.</p>
 
-                <p>Antes de Thespis, as apresentações dramáticas eram dominadas pelos coros, que cantavam e dançavam em
-                    homenagem aos deuses, especialmente Dionísio, o deus do vinho e do teatro. As narrativas eram
-                    contadas
-                    coletivamente, sem a presença de um personagem individualizado. Thespis, no entanto, ousou desafiar
-                    essa
-                    tradição e trouxe uma inovação que mudaria para sempre a face do teatro.</p>
+                <p>No final do século XIX, Stanislavski cofundou o Teatro de Arte de Moscou com Vladimir
+                    Nemirovich-Danchenko. Este teatro tornou-se um centro de inovação teatral, onde Stanislavski começou
+                    a desenvolver suas ideias sobre interpretação. Ele acreditava que a atuação deveria ser um reflexo
+                    da vida real e buscava métodos que permitissem aos atores vivenciarem verdadeiramente as emoções de
+                    seus personagens. Seu trabalho envolvia tanto a psicologia quanto a técnica, enfatizando a
+                    importância da verdade emocional na atuação.</p>
 
-                <p>Diz a lenda que Thespis separou-se do coro, adotando uma máscara e um manto para representar um
-                    personagem distinto. Essa separação permitiu-lhe dialogar diretamente com o coro, introduzindo a
-                    troca
-                    de falas e o desenvolvimento de um enredo mais dinâmico. Este novo papel de "ator" dava-lhe a
-                    capacidade
-                    de interpretar várias personagens, transformando-se em diferentes indivíduos ao longo da narrativa.
+                <p>Stanislavski desenvolveu uma série de exercícios e técnicas para ajudar os atores a alcançar essa
+                    verdade emocional. Entre eles estavam a "memória emocional", onde os atores usavam suas próprias
+                    experiências para evocar emoções, e a "análise ativa", que envolvia a compreensão profunda do texto
+                    e das motivações dos personagens. Ele também destacou a importância da concentração, relaxamento e
+                    da imaginação para a criação de uma performance convincente.
                 </p>
 
-                <p>A invenção da máscara foi fundamental para essa transição. Com a máscara, Thespis pôde ocultar sua
-                    identidade, assumindo plenamente a persona do personagem que representava. A máscara não só permitia
-                    a
-                    mudança de identidade, mas também amplificava a voz do ator, crucial para ser ouvido em grandes
-                    anfiteatros. Essa prática inovadora fez com que as peças ganhassem uma nova dimensão de profundidade
-                    e
-                    complexidade.</p>
+                <p>Através do Teatro de Arte de Moscou, Stanislavski pôde aplicar e aperfeiçoar suas teorias. Suas
+                    produções de peças de Anton Chekhov, como "O Jardim das Cerejeiras" e "Tio Vânia", são exemplos
+                    célebres de sua abordagem. Esses trabalhos não só consolidaram a reputação do teatro, mas também
+                    estabeleceram novos padrões para a atuação e direção teatral. Stanislavski insistia que a preparação
+                    do ator era essencial e que o treinamento nunca deveria cessar.</p>
 
-                <p>A ousadia de Thespis não passou despercebida. Ele logo se tornou uma figura central nas competições
-                    dramáticas realizadas durante os festivais dionisíacos, que atraíam público de toda a Grécia. Sua
-                    habilidade de cativar a audiência e dar vida a personagens mitológicos e históricos lhe rendeu
-                    grande
-                    aclamação. Conta-se que em 534 a.C., durante a Grande Dionísia, Thespis foi premiado por suas
-                    performances, consolidando seu legado como o primeiro ator da história.</p>
+                <p>Durante os anos 1920 e 1930, Stanislavski viajou pelo mundo, disseminando suas ideias. Ele encontrou
+                    diversas reações, especialmente na América, onde suas teorias foram adaptadas e evoluíram para o
+                    "Método", popularizado por atores como Marlon Brando e Al Pacino. Embora nem todos seguissem suas
+                    práticas à risca, a influência de Stanislavski foi inegável, marcando um novo caminho para a
+                    formação de atores.</p>
 
-                <p> A influência de Thespis foi profunda e duradoura. Ele estabeleceu as bases para o desenvolvimento do
-                    teatro grego clássico, influenciando dramaturgos como Ésquilo, Sófocles e Eurípides, que continuaram
-                    a
-                    expandir e refinar a arte da interpretação e do drama. A introdução do ator e da máscara permitiu o
-                    surgimento de diálogos mais complexos, conflitos internos e uma exploração mais rica das emoções
-                    humanas.</p>
+                <p> O impacto de Stanislavski no teatro moderno é imensurável. Seu Sistema não só transformou a maneira
+                    como os atores abordam seus papéis, mas também influenciou profundamente a pedagogia teatral. Ele
+                    escreveu vários livros, incluindo "A Preparação do Ator" e "A Construção do Personagem", que são
+                    estudados até hoje por aspirantes a atores em todo o mundo. Stanislavski faleceu em 1938, mas seu
+                    legado continua a viver através das inúmeras escolas de atuação e atores que seguem seus
+                    ensinamentos.</p>
 
-                <p> Além de sua inovação técnica, Thespis também desempenhou um papel simbólico. Ele personificou a
-                    transformação do teatro em uma forma de arte que não apenas entretinha, mas também provocava
-                    reflexão e
-                    introspecção. Suas performances mostravam a capacidade do teatro de explorar a condição humana, os
-                    dilemas morais e as interações sociais, temas que continuam a ressoar nos palcos contemporâneos.
+                <p> Assim, Constantin Stanislavski deixou uma marca indelével na história do teatro. Seu compromisso com
+                    a verdade e a autenticidade na atuação inspirou gerações de artistas a explorar as profundezas da
+                    psicologia humana e a transformar suas performances em reflexões vivas da realidade. Stanislavski
+                    não apenas elevou a interpretação a uma forma de arte, mas também a transformou em uma jornada
+                    contínua de auto-descoberta e expressão.
                 </p>
-
-                <p>Thespis, portanto, não foi apenas o primeiro ator; ele foi um visionário que viu o potencial do
-                    teatro para transcender os limites da performance coletiva e mergulhar nas profundezas da
-                    individualidade e da narrativa pessoal. Sua inovação pavimentou o caminho para o teatro como o
-                    conhecemos hoje, tornando-se uma referência eterna na história das artes dramáticas. Assim, Thespis
-                    permanece uma figura icônica, lembrada não apenas como o primeiro a pisar no palco como ator, mas
-                    como um pioneiro que libertou a narrativa dramática, permitindo que vozes individuais ressoassem em
-                    meio ao coro da história.</p>
             </div>
         </section>
-        <section>
-            <div class="arrows">
-                <div class="arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+        <section id="monologos" class="red">
+            <div class="arrows white">
+                <div class="arrow left-arrow"><i class="fa-solid fa-chevron-left"
+                        onclick="changeSlideMonologos(-1)"></i></div>
+                <div class="arrow right-arrow"><i class="fa-solid fa-chevron-right"
+                        onclick="changeSlideMonologos(1)"></i></div>
             </div>
             <h2>MONÓLOGOS</h2>
-            <div class="container">
+            <div class="circles">
+                <div class="circle white_circle active" onclick="circleButtonMonologo(0)"></div>
+                <div class="circle white_circle" onclick="circleButtonMonologo(1)"></div>
+                <div class="circle white_circle" onclick="circleButtonMonologo(2)"></div>
+                <div class="circle white_circle" onclick="circleButtonMonologo(3)"></div>
+                <div class="circle white_circle" onclick="circleButtonMonologo(4)"></div>
+            </div>
+            <div class="container monologos active">
+                <h3>Sou apenas um homem de teatro</h3>
+                <figure>
+                    <img style="width: 60rem;" src="./assets/images/monólogos/capa-liberdade-int.jpg"
+                        alt="Cataz da peça Liberdade Liberdade.">
+                    <figcaption>Cartaz da peça Liberdade Liberdade</figcaption>
+                </figure>
+                <p>Sou apenas um homem de teatro. Sempre fui e sempre serei um homem de teatro. Quem é capaz de
+                    dedicar toda a vida à humanidade e à paixão existentes nestes metros de tablado, esse é um homem
+                    de teatro.Nós achamos que é preciso cantar
+                    Agora, mais que nunca, é preciso cantar.</p>
+                <p>Por isso, “Operário do canto, me apresento</p>
+                <p>sem marca ou cicatriz, limpas as mãos,</p>
+                <p>minha alma limpa, a face descoberta,</p>
+                <p>aberto o peito, e – expresso documento</p>
+                <p>a palavra conforme o pensamento.</p>
+                <p>Fui chamado a cantar e para tanto</p>
+                <p>há um mar de som no búzio de meu canto.</p>
+                <p>Trabalho à noite e sem revezamentos.</p>
+                <p>Se há mais quem cante, cantaremos juntos;</p>
+                <p>Sem se tornar com isso menos pura,</p>
+                <p>A voz sobe uma oitava na mistura.</p>
+                <p>Não canto onde não seja a boca livre,</p>
+                <p>Onde não haja ouvidos limpos e almas</p>
+                <p>afeitas a escutar sem preconceito.</p>
+                <p>Para enganar o tempo – ou distrair</p>
+                <p>criaturas já de si tão mal atentas,</p>
+                <p>não canto... Canto apenas quando dança,</p>
+                <p>nos olhos dos que me ouvem, a esperança”.</p>
+                <br>
+                <p>"LIBERDADE LIBERDADE” de Flávio Rangel e Millôr Fernandes</p>
+
+            </div>
+            <div class="container monologos">
                 <h3>Morte de Cesar!</h3>
-                <img src="./assets/images/monólogos/marco_antonio.jpg"
-                    alt="Discuros do Funeral de Cesar, feito por Marco Antônio.">
+                <figure>
+                    <img src="./assets/images/monólogos/marco_antonio.jpg"
+                        alt="Discuros do Funeral de Cesar, feito por Marco Antônio.">
+                    <figcaption>Pintura representando o assassinato de Júlio César</figcaption>
+                </figure>
                 <p>Amigos! Romanos! Patrícios! Prestai-me atenção!</p>
                 <p>Eu vim para enterrar Cesar, não pra elogiá-lo. O mal que os homens fazem vive depois deles …o bem é
                     quase sempre enterrado com seus ossos. Seja assim com Cesar. O nobre Brutus vos disse que Cesar era
@@ -401,14 +412,134 @@
                 <p>"JULIO CESAR” de William Shakespeare: tradução livre de Millor Fernandes</p>
 
             </div>
+            <div class="container monologos">
+                <h3>Ser ou Não Ser...</h3>
+                <figure>
+                    <img src="./assets/images/monólogos/hamlet.jpg"
+                        alt="Capa do livro da peça Hamlet de William Shakespeare">
+                    <figcaption>Capa do livro da peça Hamlet de William Shakespeare</figcaption>
+                </figure>
+                <p>Ser ou não ser – eis a questão</p>
+                <p>Será mais nobre sofrer na alma</p>
+                <p>Pedradas e flechadas do destino feroz</p>
+                <p>Ou pegar em armas contra um mar de angústias –</p>
+                <p>E, combatendo-o, dar-lhe fim? Morrer; dormir;</p>
+                <p>Só isso. E com o sono – dizem – extinguir</p>
+                <p>Dores do coração e mil mazelas naturais</p>
+                <p>A que a carne é sujeita; eis uma consumação</p>
+                <p>Ardentemente desejável. Morrer – dormir –</p>
+                <p>Dormir! Talvez sonhar. Aí está o obstáculo!</p>
+                <p>Os sonhos que hão de vir no sonho da morte</p>
+                <p>Quando tivermos escapado ao tumulto vital</p>
+                <p>Nos obrigam a hesitar: e é essa reflexão</p>
+                <p>Que dá à desventura uma vida tão longa.</p>
+                <p>Pois quem suportaria o açoite e os insultos do mundo,</p>
+                <p>A afronta do opressor, o desdém do orgulhoso,</p>
+                <p>As pontadas do amor humilhado, as delongas da lei,</p>
+                <p>A prepotência do mundo, e o achincalhe</p>
+                <p>Que o mérito paciente recebe dos inúteis.</p>
+                <p>Podendo ele próprio, encontrar seu repouso</p>
+                <p>Com um simples punhal? Quem aguentaria fardos,</p>
+                <p>Gemendo e suando numa vida servil,</p>
+                <p>Senão porque o terror de alguma coisa após a morte –</p>
+                <p>O pais não descoberto, de cujos confins</p>
+                <p>Jamais voltou nenhum viajante – nos confunde a vontade,</p>
+                <p>Nos faz preferir e suportar os males que já temos,</p>
+                <p>A fugirmos pra outro que desconhecemos?</p>
+                <p>E assim a reflexão faz todos nós covardes.</p>
+                <p>E assim o matiz natural da decisão</p>
+                <p>Se transforma no doentio pálido do pensamento,</p>
+                <p>E empreitadas de vigor e coragem,</p>
+                <p>Refletidas demais, saem de seu caminho,</p>
+                <p>Perdem o nome de ação.</p>
+                <br>
+                <p>"HAMLET” de William Shakespeare: tradução livre de Millor Fernandes</p>
+
+            </div>
+            <div class="container monologos">
+                <h3>Ensaio sobre a Queda</h3>
+                <figure>
+                    <img style="width: 60rem;" src="./assets/images/monólogos/ensaio_sobre_a_queda.png"
+                        alt="Cena da peça Ensaio Sobre a Queda de Carlos Canahameiro">
+                    <figcaption>Cena da peça Ensaio Sobre a Queda de Carlos Canahameiro</figcaption>
+                </figure>
+                <p><strong>DANTE</strong></p>
+                <p>Deus é uma grande buceta pairando sobre o abismo. Entediado, como convém as bucetas, sem saber o que
+                    fazer, essa enorme buceta, que nenhum caralho do mundo conseguiria pentrar, inventa de parir. De
+                    cuspir através de seus grandes lábios um ser humano. Deus-Buceta pariu sobre o abismo e desde então,
+                    viver é cair. Consegue visualizar, doutor? Uma buceta arreganhada parindo filhos sobre o abismo?
+                    Pois foi isso que deus fez. E só nos resta cair. Como se nossas mães, inspiradas no deus-buceta, nos
+                    jogassem no abismo depois de cortar o cordão umbilical. E lá vamos nós, caindo, caindo... E durante
+                    a queda, vemos outros que caem do nosso lado. E, malditamente, inventamos de cair juntos. Uma chuva
+                    de seres humanos sobre um abismo negro. Nos acostumamos à queda, claro! Ao que não nos acostumamos,
+                    doutor? Se nascemos caindo - acho que é por isso que choramos quando nascemos! -, por que não nos
+                    acostumariámos a todo resto, todo mal e bondade que podemos fazer? Por que, doutor? É nisso vai,
+                    todos caindo, todos sabendo que um dia o abismo terá um fim... E nos encontramos na queda, nos
+                    relacionamos na queda, amamos e somos odiados na queda, fazemos filhos e parimos na queda e tudo,
+                    tudo sempre estará caindo até o final invevitável. E quando aprendemos a viver com os outros que
+                    caem, esses encontram o seu fim. O abismo acaba para essas pessoas e você continua caindo... Sozinho
+                    ou à procura de outros que caem. Até o seu fim chegar, como o meu está chegando. Sinto o cheiro da
+                    terra firme se aproximando, Doutor. É a morte.</p>
+                <p><strong>DOUTOR</strong></p>
+                <p>Ou o final do abismo, como você prefere.</p>
+                <p><strong>DANTE</strong></p>
+                <p>O discurso é meu doutor. É meu... Você ouve. Sim, é o final do abismo, a única certeza de quem cai.
+                    Não há saída. Eu farei falta, mas queda dos outros fará com que se esqueçam do final da minha e
+                    assim será, <i>ad eternum</i>. Ou até o deus-buceta resolver virar um deus-cralho e morrer sozinho
+                    por não poder parir.</p>
+
+                <br>
+                <p>"ENSAIO SOBRE A QUEDA” de Carlos Canhameiro</p>
+
+            </div>
+            <div class="container monologos">
+                <h3>As três irmãs</h3>
+                <figure>
+                    <img style="width: 40rem;" src="./assets/images/monólogos/tresirmas.jpg"
+                        alt="Capa do Livro da Peça As três irmãs de Anton Tchekhov">
+                    <figcaption>Capa do Livro da Peça As três irmãs de Anton Tchekhov</figcaption>
+                </figure>
+                <p><strong>ANDREI SERGUÊIEVITCH</strong></p>
+                <p>Apenas quero pôr isso em pratos limpos e em seguida vou, imediatamente... Em primeiro lugar, vocês
+                    têm algo contra Natacha, minha mulher, vejo isso desde o dia do nosso casamento. Natacha é uma
+                    pessoa excelente, honrada, uma alma franca e nobre – essa é a minha opinião. Amo a minha mulher,
+                    respeito-a – entendem? – respeito-a e exijo dos outros que também a respeitem. Repito, é uma mulher
+                    excelente e honrada, e vocês estão amuadas assim apenas, perdoem-me, por capricho.(PAUSA) Em
+                    segundo lugar, parece-me que vocês estão zangadas por eu não ter me tornado professor universitário
+                    e não ter seguido a carreira científica. Porém eu trabalho na prefeitura, sou membro do conselho
+                    municipal e considero meu cargo tão sagrado e tão importante como qualquer carreira científica. Sim,
+                    eu sou membro do conselho, e se quiserem saber, tenho orgulho disso... (PAUSA) E em terceiro
+                    lugar... Quero dizer ainda... É que... Hipotequei a casa sem o consentimento de vocês... Pois bem,
+                    sinto-me culpado por isso, e peço-lhes que me perdoem... Minhas dívidas me obrigavam a fazer isso.
+                    Trinta e cinco mil. Deixei de jogar há muito, mas o que, sobretudo me serve de justificativa é que
+                    vocês, por serem mulheres, recebem uma pensão, enquanto eu... Praticamente não tinha rendimento
+                    algum... (PAUSA) </p>
+                <p><strong>(...)</strong></p>
+                <p>Elas não me ouvem... Natacha é uma mulher excelente e honrada. (ANDA EM SILÊNCIO, DE UM LADO PARA
+                    OUTRO DO PALCO, DEPOIS PÁRA) Quando me casei com ela pensava que seríamos felizes, que todos
+                    seríamos felizes... Mas, meu Deus... (DESATA A CHORAR) Queridas irmãs, queridas e boas irmãs, não
+                    acreditem em mim, não acreditem!... (SAI) </p>
+                <br>
+                <p>"AS TRÊS IRMÃS” de Anton Tchekhov</p>
+
+            </div>
         </section>
-        <section>
+        <section id="poemas">
             <div class="arrows">
-                <div class="arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="arrow left-arrow"><i class="fa-solid fa-chevron-left" onclick="changeSlidePoemas(-1)"></i>
+                </div>
+                <div class="arrow right-arrow"><i class="fa-solid fa-chevron-right" onclick="changeSlidePoemas(1)"></i>
+                </div>
             </div>
             <h2>POEMAS</h2>
-            <div class="container">
+            <div class="circles">
+                <div class="circle poema_circle active" onclick="circleButtonPoema(0)"></div>
+                <div class="circle poema_circle" onclick="circleButtonPoema(1)"></div>
+                <div class="circle poema_circle" onclick="circleButtonPoema(2)"></div>
+                <div class="circle poema_circle" onclick="circleButtonPoema(3)"></div>
+                <div class="circle poema_circle" onclick="circleButtonPoema(4)"></div>
+            </div>
+            <div class="container poemas active">
                 <center>
                     <h3>Itaca</h3>
                     <p>Se partires um dia rumo à Ítaca</p>
@@ -452,15 +583,178 @@
                     <p>in: O Quarteto de Alexandria - trad. José Paulo Paz.</p>
                 </center>
             </div>
+            <div class="container poemas">
+
+                <h3>Sou apenas um homem de teatro</h3>
+                <p>Sou apenas um homem de teatro. Sempre fui e sempre serei um homem de teatro. Quem é capaz de
+                    dedicar toda a vida à humanidade e à paixão existentes nestes metros de tablado, esse é um homem
+                    de teatro.Nós achamos que é preciso cantar (Acordes da Marcha da Quarta-feira de Cinzas3) –
+                    Agora, mais que nunca, é preciso cantar.</p>
+                <p>Por isso, “Operário do canto, me apresento</p>
+                <p>sem marca ou cicatriz, limpas as mãos,</p>
+                <p>minha alma limpa, a face descoberta,</p>
+                <p>aberto o peito, e – expresso documento</p>
+                <p>a palavra conforme o pensamento.</p>
+                <p>Fui chamado a cantar e para tanto</p>
+                <p>há um mar de som no búzio de meu canto.</p>
+                <p>Trabalho à noite e sem revezamentos.</p>
+                <p>Se há mais quem cante, cantaremos juntos;</p>
+                <p>Sem se tornar com isso menos pura,</p>
+                <p>A voz sobe uma oitava na mistura.</p>
+                <p>Não canto onde não seja a boca livre,</p>
+                <p>Onde não haja ouvidos limpos e almas</p>
+                <p>afeitas a escutar sem preconceito.</p>
+                <p>Para enganar o tempo – ou distrair</p>
+                <p>criaturas já de si tão mal atentas,</p>
+                <p>não canto... Canto apenas quando dança,</p>
+                <p>nos olhos dos que me ouvem, a esperança”.</p>
+
+                <br>
+                <p>Constantino Kabvafis (1863-1933)</p>
+                <p>in: O Quarteto de Alexandria - trad. José Paulo Paz.</p>
+
+            </div>
+            <div class="container poemas">
+                <center>
+                    <h3>Itaca 3</h3>
+                    <p>Se partires um dia rumo à Ítaca</p>
+                    <p>Faz votos de que o caminho seja longo</p>
+                    <p>repleto de aventuras, repleto de saber.</p>
+                    <p>Nem lestrigões, nem ciclopes,</p>
+                    <p>nem o colérico Posidon te intimidem!</p>
+                    <p>Eles no teu caminho jamais encontrarás</p>
+                    <p>Se altivo for teu pensamento</p>
+                    <p>Se sutil emoção o teu corpo e o teu espírito tocar</p>
+                    <p>Nem lestrigões, nem ciclopes</p>
+                    <p>Nem o bravio Posidon hás de ver</p>
+                    <p>Se tu mesmo não os levares dentro da alma,</p>
+                    <p>Se tua alma não os puser dentro de ti.</p>
+                    <p>Faz votos de que o caminho seja longo.</p>
+                    <p>Numerosas serão as manhãs de verão</p>
+                    <p>Nas quais com que prazer, com que alegria</p>
+                    <p>Tu hás de entrar pela primeira vez um porto</p>
+                    <p>Para correr as lojas dos fenícios</p>
+                    <p>e belas mercancias adquirir.</p>
+                    <p>Madrepérolas, corais, âmbares, ébanos</p>
+                    <p>E perfumes sensuais de toda espécie</p>
+                    <p>Quanto houver de aromas deleitosos.</p>
+                    <p>A muitas cidades do Egito peregrinas</p>
+                    <p>Para aprender, para aprender dos doutos.</p>
+                    <p>Tem todo o tempo ítaca na mente.</p>
+                    <p>Estás predestinado a ali chegar.</p>
+                    <p>Mas, não apresses a viagem nunca.</p>
+                    <p>Melhor muitos anos levares de jornada</p>
+                    <p>E fundeares na ilha velho enfim.</p>
+                    <p>Rico de quanto ganhaste no caminho</p>
+                    <p>Sem esperar riquezas que Ítaca te desse.</p>
+                    <p>Uma bela viagem deu-te Ítaca.</p>
+                    <p>Sem ela não te ponhas a caminho.</p>
+                    <p>Mais do que isso não lhe cumpre dar-te.</p>
+                    <p>Ítaca não te iludiu, se a achas pobre.</p>
+                    <p>Tu te tornaste sábio, um homem de experiência.</p>
+                    <p>E, agora, sabes o que significam Ítacas.</p>
+                    <br>
+                    <p>Constantino Kabvafis (1863-1933)</p>
+                    <p>in: O Quarteto de Alexandria - trad. José Paulo Paz.</p>
+                </center>
+            </div>
+            <div class="container poemas">
+                <center>
+                    <h3>Itaca 4</h3>
+                    <p>Se partires um dia rumo à Ítaca</p>
+                    <p>Faz votos de que o caminho seja longo</p>
+                    <p>repleto de aventuras, repleto de saber.</p>
+                    <p>Nem lestrigões, nem ciclopes,</p>
+                    <p>nem o colérico Posidon te intimidem!</p>
+                    <p>Eles no teu caminho jamais encontrarás</p>
+                    <p>Se altivo for teu pensamento</p>
+                    <p>Se sutil emoção o teu corpo e o teu espírito tocar</p>
+                    <p>Nem lestrigões, nem ciclopes</p>
+                    <p>Nem o bravio Posidon hás de ver</p>
+                    <p>Se tu mesmo não os levares dentro da alma,</p>
+                    <p>Se tua alma não os puser dentro de ti.</p>
+                    <p>Faz votos de que o caminho seja longo.</p>
+                    <p>Numerosas serão as manhãs de verão</p>
+                    <p>Nas quais com que prazer, com que alegria</p>
+                    <p>Tu hás de entrar pela primeira vez um porto</p>
+                    <p>Para correr as lojas dos fenícios</p>
+                    <p>e belas mercancias adquirir.</p>
+                    <p>Madrepérolas, corais, âmbares, ébanos</p>
+                    <p>E perfumes sensuais de toda espécie</p>
+                    <p>Quanto houver de aromas deleitosos.</p>
+                    <p>A muitas cidades do Egito peregrinas</p>
+                    <p>Para aprender, para aprender dos doutos.</p>
+                    <p>Tem todo o tempo ítaca na mente.</p>
+                    <p>Estás predestinado a ali chegar.</p>
+                    <p>Mas, não apresses a viagem nunca.</p>
+                    <p>Melhor muitos anos levares de jornada</p>
+                    <p>E fundeares na ilha velho enfim.</p>
+                    <p>Rico de quanto ganhaste no caminho</p>
+                    <p>Sem esperar riquezas que Ítaca te desse.</p>
+                    <p>Uma bela viagem deu-te Ítaca.</p>
+                    <p>Sem ela não te ponhas a caminho.</p>
+                    <p>Mais do que isso não lhe cumpre dar-te.</p>
+                    <p>Ítaca não te iludiu, se a achas pobre.</p>
+                    <p>Tu te tornaste sábio, um homem de experiência.</p>
+                    <p>E, agora, sabes o que significam Ítacas.</p>
+                    <br>
+                    <p>Constantino Kabvafis (1863-1933)</p>
+                    <p>in: O Quarteto de Alexandria - trad. José Paulo Paz.</p>
+                </center>
+            </div>
+            <div class="container poemas">
+                <center>
+                    <h3>Itaca 5</h3>
+                    <p>Se partires um dia rumo à Ítaca</p>
+                    <p>Faz votos de que o caminho seja longo</p>
+                    <p>repleto de aventuras, repleto de saber.</p>
+                    <p>Nem lestrigões, nem ciclopes,</p>
+                    <p>nem o colérico Posidon te intimidem!</p>
+                    <p>Eles no teu caminho jamais encontrarás</p>
+                    <p>Se altivo for teu pensamento</p>
+                    <p>Se sutil emoção o teu corpo e o teu espírito tocar</p>
+                    <p>Nem lestrigões, nem ciclopes</p>
+                    <p>Nem o bravio Posidon hás de ver</p>
+                    <p>Se tu mesmo não os levares dentro da alma,</p>
+                    <p>Se tua alma não os puser dentro de ti.</p>
+                    <p>Faz votos de que o caminho seja longo.</p>
+                    <p>Numerosas serão as manhãs de verão</p>
+                    <p>Nas quais com que prazer, com que alegria</p>
+                    <p>Tu hás de entrar pela primeira vez um porto</p>
+                    <p>Para correr as lojas dos fenícios</p>
+                    <p>e belas mercancias adquirir.</p>
+                    <p>Madrepérolas, corais, âmbares, ébanos</p>
+                    <p>E perfumes sensuais de toda espécie</p>
+                    <p>Quanto houver de aromas deleitosos.</p>
+                    <p>A muitas cidades do Egito peregrinas</p>
+                    <p>Para aprender, para aprender dos doutos.</p>
+                    <p>Tem todo o tempo ítaca na mente.</p>
+                    <p>Estás predestinado a ali chegar.</p>
+                    <p>Mas, não apresses a viagem nunca.</p>
+                    <p>Melhor muitos anos levares de jornada</p>
+                    <p>E fundeares na ilha velho enfim.</p>
+                    <p>Rico de quanto ganhaste no caminho</p>
+                    <p>Sem esperar riquezas que Ítaca te desse.</p>
+                    <p>Uma bela viagem deu-te Ítaca.</p>
+                    <p>Sem ela não te ponhas a caminho.</p>
+                    <p>Mais do que isso não lhe cumpre dar-te.</p>
+                    <p>Ítaca não te iludiu, se a achas pobre.</p>
+                    <p>Tu te tornaste sábio, um homem de experiência.</p>
+                    <p>E, agora, sabes o que significam Ítacas.</p>
+                    <br>
+                    <p>Constantino Kabvafis (1863-1933)</p>
+                    <p>in: O Quarteto de Alexandria - trad. José Paulo Paz.</p>
+                </center>
+            </div>
         </section>
-        <section>
+        <section id="quiz" class="red">
             <h2>QUIZ</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium eaque saepe vel, dolores adipisci
                 excepturi, sunt dicta dolor vero asperiores repellendus a! Et tempore eum itaque, perferendis est culpa
                 corrupti!</p>
             <button>Teste seu Conhecimento</button>
         </section>
-        <section>
+        <section id="area_secreta">
             <h2>Area Secreta!</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus libero repellat debitis ducimus fugit
                 officiis unde voluptate voluptatem laboriosam vel.</p>
@@ -469,12 +763,17 @@
     </main>
     <footer>
         <ul>
-            <li>HOME</li>
-            <li>HISTÓRIA</li>
-            <li>MONÔLOGOS</li>
-            <li>POEMAS</li>
-            <li>QUIZ</li>
-            <li>ÁREA SECRETA</li>
+            <li><a href="#home">HOME</a></li>
+            <div class="linha"></div>
+            <li><a href="#historia">HISTÓRIA</a></li>
+            <div class="linha"></div>
+            <li><a href="#monologos">MONÔLOGOS</a></li>
+            <div class="linha"></div>
+            <li><a href="#poemas">POEMAS</a></li>
+            <div class="linha"></div>
+            <li><a href="#quiz">QUIZ</a></li>
+            <div class="linha"></div>
+            <li><a href="#area_secreta">ÁREA SECRETA</a></li>
         </ul>
     </footer>
 </body>

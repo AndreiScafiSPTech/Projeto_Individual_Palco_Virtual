@@ -12,6 +12,12 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 html {
@@ -41,7 +47,7 @@ header .container {
 
 header .container h3 {
     font-size: 2.5rem;
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
 }
 
 header ul {
@@ -62,7 +68,7 @@ header li:hover {
 header .container button {
     font-size: 1.6rem;
     padding: .5rem 1rem;
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
     border-radius: 2rem;
     border: none;
     background-color: withe;
@@ -88,6 +94,10 @@ header .container button:hover {
     transition: all .4s ease;
 }
 
+.arrows.white {
+    color: white;
+}
+
 .arrow {
     cursor: pointer;
     opacity: 0.7;
@@ -109,25 +119,41 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 section .container {
     width: 75%;
     box-shadow: 0.5rem 0.5rem 1rem .5rem rgba(0, 0, 0, 0.8);
     padding: 2rem;
+    background-color: white;
+    margin-bottom: 5rem;
+}
+
+section .container figure {
+    float: right;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section .container img {
-    float: right;
     width: 70rem;
-    margin: 2rem;
+}
+
+figcaption {
+    font-size: 1.6rem;
+    margin-top: .5rem;
 }
 
 section h2 {
     font-size: 4rem;
     margin: 2rem 0 0;
     color: var(--secondary-color);
+}
+
+section.red h2 {
+    color: white;
 }
 
 section .container h3 {
@@ -142,6 +168,39 @@ section .container p {
     line-height: 2.2rem;
 }
 
+.circles {
+    width: 30rem;
+    height: 2rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: solid .1rem var(--main-color);
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: var(--secondary-color);
+}
+
+.red {
+    background-color: var(--secondary-color);
+}
+
+.white_circle {
+    border: solid .1rem white;
+}
+
+.white_circle.active {
+    background-color: white;
+}
+
 .historia {
     display: none;
     visibility: hidden;
@@ -152,21 +211,46 @@ section .container p {
     visibility: visible;
 }
 
-.circles {
-    width: 30rem;
-    height: 2rem;
-    margin: 1rem;
+.monologos {
+    display: none;
+    visibility: hidden;
+}
+
+.monologos.active {
+    display: block;
+    visibility: visible;
+}
+
+.poemas {
+    display: none;
+    visibility: hidden;
+}
+
+.poemas.active {
+    display: block;
+    visibility: visible;
+}
+
+footer {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-secondary-color);
+    color: white;
+}
+
+footer ul {
+    width: 80rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
 }
 
-.circle {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border: solid .1rem var(--main-color);
-}
-
-.circle.active {
-    background-color: var(--secondary-color);
+.linha {
+    width: .1rem;
+    height: 6rem;
+    background-color: white;
 }
