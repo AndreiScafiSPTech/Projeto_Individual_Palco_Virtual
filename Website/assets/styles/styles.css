@@ -241,6 +241,11 @@ footer {
     color: white;
 }
 
+.colunas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 footer ul {
     width: 80rem;
     display: flex;
