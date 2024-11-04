@@ -246,6 +246,97 @@ footer {
     justify-content: space-evenly;
 }
 
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.quiz_container {
+    display: flex;
+    width: 80%;
+    height: 65vh;
+    margin-top: 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz_titulo {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.quiz_titulo p {
+    color: white;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.btn_quiz {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: var(--main-color);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.btn_quiz:hover {
+    font-size: 2.2rem;
+}
+
+.btn_quiz:active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.ranks {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    color: white;
+    font-size: 2rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+.tb_colunas {
+    background-color: white;
+    color: var(--main-color);
+}
+
+.linha_quiz {
+    width: .5rem;
+    height: 90%;
+    background-color: white;
+}
+
 footer ul {
     width: 80rem;
     display: flex;
