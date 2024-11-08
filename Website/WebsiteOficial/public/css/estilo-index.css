@@ -480,10 +480,50 @@ html {
 }
 
 #novick {
-    background-image: url(../assets/imgs/dublagem/novick.jpg);
+    background-image: url(../assets/imgs/dublagem/novickAjust.png);
     background-size: cover;
     background-position: bottom;
     border-radius: 5rem;
+}
+
+#noro {
+    background-image: url(../assets/imgs/dublagem/noroAjust.png);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5rem;
+}
+
+#cdzOmega {
+    background-image: url(../assets/imgs/dublagem/cdzOmega2.webp);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5rem;
+}
+
+#sidero {
+    background-image: url(../assets/imgs/dublagem/sidero.png);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5rem;
+}
+
+#saito {
+    background-image: url(../assets/imgs/dublagem/SaitoUebu.jpg);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5rem;
+}
+
+#claymore {
+    background-image: url(../assets/imgs/dublagem/claymore2.png);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5rem;
+}
+
+.audiodisplay {
+    width: 80%;
+    margin: 1rem 0;
 }
 
 .pricing-card-heading {
