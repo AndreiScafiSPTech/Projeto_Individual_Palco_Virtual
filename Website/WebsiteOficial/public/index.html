@@ -2,81 +2,288 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilo-index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
-    <title>AquaTech | Página Inicial</title>
+  <title>Andrei Scafi de Vasconcelos</title>
 
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">
+        <span>A</span>ndrei<span>S</span>cafi
+      </a>
     </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
+    <div class="nav-list">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about-us" class="nav-link">Sobre mim</a>
+      <a href="simulador.html" class="nav-link">Quiz</a>
+      <a href="login.html" class="nav-link">Login</a>
+      <a href="cadastro.html" class="nav-link">Cadastro</a>
     </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+  </nav>
+
+  <!-- End of Navbar -->
+
+  <!-- Menu -->
+  <div class="menu">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+  </div>
+
+  <!-- End of Menu -->
+
+  <div class="container">
+    <!-- Section 1 -->
+    <section class="section-1" id="home">
+      <div class="banner">
+        <h1 class="banner-heading">
+          <span class="heading-1">Ator</span>
+          <span class="heading-2">Dublador</span>
+          <span class="heading-3">Locutor</span>
+          <span class="heading-4">Voz Original</span>
+        </h1>
+        <p class="banner-paragraph">Andrei Scafi </p>
+        <a href="#pricing"><button class="banner-btn">Portifólio</button></a>
+      </div>
+      <div class="fotoPerfil">
+      </div>
+    </section>
+    <!-- End of Section 1 -->
+
+    <!-- Section 2 -->
+    <section class="section-2" id="about-us">
+      <h1 class="section-heading">Sobre mim</h1>
+      <div class="section-heading-line"></div>
+      <div class="video-wrapper">
+        <video src="./assets/video//liberdade01.mp4" class="video"></video>
+        <div class="controls">
+          <div class="video-bar-wrapper">
+            <div class="video-bar"></div>
           </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+          <div class="buttons">
+            <button>
+              <i class="far fa-play-circle"></i>
+            </button>
           </div>
         </div>
       </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
+      <p class="section-2-paragraph">
+        <i class="fas fa-quote-left"></i>O teatro não mudou a minha vida. Ele salvou a minha vida! Sob a luz da ribalta
+        eu me encontrei. Após mergulhar nas águas profundas do palco, emergi uma nova pessoa. Mais confiante, mais
+        altivo e perceptivo. E o mais importante de tudo. Encontrei minha própria voz.
+        <i class="fas fa-quote-right"></i>
+      </p>
+    </section>
+    <!-- End of Section 2 -->
+
+    <!-- Section 3 -->
+    <section class="section-3" id="pricing">
+      <h1 class="section-heading">Portfólio</h1>
+      <div class="section-heading-line"></div>
+      <div class="swiper-container">
+        <div class="pricing-cards-wrapper swiper-wrapper">
+          <div class="pricing-card swiper-slide">
+            <div id="novick" class="pricing-card-front">
+              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
+              <!--   <h3 class="pricing-card-price">$0</h3>
+              <ul class="pricing-card-list list-free">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-times"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-times"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-times"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+              </ul> -->
+              <button class="pricing-card-btn btn-free">Novick Grand - TOG</button>
+            </div>
+            <!--  <div class="pricing-card-back back-free">
+                        <a href="#">Order Now</a>
+                    </div> -->
+          </div>
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-basic">Locução</h1>
+              <h3 class="pricing-card-price">$299</h3>
+              <ul class="pricing-card-list list-basic">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-times"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-basic">Teatro</button>
+            </div>
+            <!--   <div class="pricing-card-back back-basic">
+                        <a href="#">Order Now</a>
+                    </div> -->
+          </div>
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-standard">Câmera</h1>
+              <h3 class="pricing-card-price">$699</h3>
+              <ul class="pricing-card-list list-standard">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-standard">Choose Plan</button>
+            </div>
+            <!-- <div class="pricing-card-back back-standard">
+                        <a href="#">Order Now</a>
+                    </div> -->
+          </div>
+          <div class="pricing-card swiper-slide">
+            <div class="pricing-card-front">
+              <h1 class="pricing-card-heading heading-premium">PREMIUM</h1>
+              <h3 class="pricing-card-price">$999</h3>
+              <ul class="pricing-card-list list-premium">
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+                <li>
+                  <i class="fas fa-check"></i>
+                  <span>Pricing Card Item</span>
+                </li>
+              </ul>
+              <button class="pricing-card-btn btn-premium">Choose Plan</button>
+            </div>
+            <!--   <div class="pricing-card-back back-premium">
+                        <a href="#">Order Now</a>
+                    </div> -->
+          </div>
+
+        </div>
+
+        <!-- Adicionando itens -->
+
       </div>
-    </div>
-  </body>
+    </section>
+    <!-- End of Section 3 -->
+
+    <!-- Section 4 -->
+    <section class="section-4" id="contact">
+      <h1 class="section-heading">Contact</h1>
+      <div class="section-heading-line"></div>
+      <div class="contact-wrapper">
+        <div class="contact-details">
+          <div class="phone">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Phone</h3>
+            <p>+123 456 789</p>
+            <p>+987 654 321</p>
+          </div>
+          <div class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Address</h3>
+            <p>Main Street #123</p>
+            <p>Wall Street #123</p>
+          </div>
+          <div class="email">
+            <i class="far fa-envelope"></i>
+            <h3>Email</h3>
+            <p>support@gmail.com</p>
+            <p>sales@gmail.com</p>
+          </div>
+        </div>
+        <h1>Get in Touch</h1>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+    </section>
+    <!-- End of Section 4 -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="copyright">
+        Copyright &copy; CodeAndCreate All Rights Reserved
+      </p>
+    </footer>
+    <!-- End of Footer -->
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="./js/script-index.js"></script>
+</body>
 
 </html>
