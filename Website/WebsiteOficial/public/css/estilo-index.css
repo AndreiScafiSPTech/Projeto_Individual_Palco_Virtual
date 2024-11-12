@@ -13,6 +13,12 @@
     font-family: 'Baloo Da 2', cursive;
 }
 
+a {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -165,29 +171,28 @@ html {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background: url(../assets/imgs/fotos/Premium\ Photo\ _\ Empty\ theater\ stage\ with\ black\ velvet\ curtains\ 3d\ illustration.jpg) no-repeat;
+    background-color: #03070e;
+    /* background: url(../assets/imgs/fotos/Premium\ Photo\ _\ Empty\ theater\ stage\ with\ black\ velvet\ curtains\ 3d\ illustration.jpg) no-repeat;
     background-size: cover;
+    background-position: center; */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 .banner {
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translateX(-50%);
+    width: 45%;
     text-align: center;
 }
 
 .fotoPerfil {
-    position: absolute;
-    top: 20%;
-    right: 15%;
-    width: 55rem;
+    width: 35%;
     aspect-ratio: 1;
     border-radius: 50%;
-    /*  border: solid .2rem rgba(255, 255, 255, 0.5); */
-    background-image: url(../assets/imgs/fotos/valeNegro-3.jpg);
+    border: solid 1rem rgba(255, 255, 255, 0.8);
+    background-image: url(../assets/imgs/fotos/fotoPerfil.png);
     background-size: cover;
     background-position: center;
     transform: translateZ(8rem);
@@ -276,7 +281,7 @@ html {
     text-transform: uppercase;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
-    width: 30%;
+    width: 50rem;
     margin: 0 auto 4rem;
     padding: 1rem 0;
     box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
@@ -483,47 +488,46 @@ html {
     background-image: url(../assets/imgs/dublagem/novickAjust.png);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 #noro {
     background-image: url(../assets/imgs/dublagem/noroAjust.png);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 #cdzOmega {
     background-image: url(../assets/imgs/dublagem/cdzOmega2.webp);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 #sidero {
     background-image: url(../assets/imgs/dublagem/sidero.png);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 #saito {
     background-image: url(../assets/imgs/dublagem/SaitoUebu.jpg);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 #claymore {
     background-image: url(../assets/imgs/dublagem/claymore2.png);
     background-size: cover;
     background-position: bottom;
-    border-radius: 5rem;
+    border-radius: 5rem 5rem 1rem 1rem;
 }
 
 .audiodisplay {
-    width: 80%;
-    margin: 1rem 0;
+    width: 70%;
 }
 
 .pricing-card-heading {
@@ -884,6 +888,10 @@ html {
         font-size: 40%;
     }
 
+    .section-1 {
+        flex-direction: column-reverse;
+    }
+
     .banner {
         top: 25%;
     }
@@ -968,6 +976,15 @@ html {
             opacity: 0;
             letter-spacing: 2rem;
         }
+    }
+
+    .banner-heading {
+        height: 10rem;
+    }
+
+    .banner-paragraph {
+        width: 30rem;
+        font-size: 2.6rem;
     }
 
     .video-wrapper {

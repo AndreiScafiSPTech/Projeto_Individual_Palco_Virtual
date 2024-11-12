@@ -74,4 +74,4 @@ var swiper = new Swiper('.swiper-container', {
 
 /* End of Section 3 Pricing Cards swiper module */
 
-/* End of Teacher Code */
+/* End of Teacher's Code */
