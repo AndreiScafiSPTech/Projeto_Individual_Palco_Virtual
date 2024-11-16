@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -15,6 +15,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
+
+
+
 
   <title>Andrei Scafi de Vasconcelos</title>
 
@@ -44,7 +47,6 @@
   <!-- Fim da Navbar -->
 
   <!-- Home -->
-
   <section class="home" id="home">
     <div class="filtro-preto"></div>
     <h3>
@@ -106,9 +108,58 @@
   </section>
   <!-- Fim do sobre mim -->
 
+  <!-- Teatro -->
 
+  <section class="teatro">
+
+    <div class="filtro-preto"></div>
+    <div class="titulo">
+      <h2>
+        Teatro
+      </h2>
+    </div>
+    <div class="container">
+      <div class="carrocel">
+        <h2 class="carrocel-titulo">
+          Peças Montadas
+        </h2>
+        <button class="pre-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="nxt-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="cartazes-container">
+          <div class="cartaz red"></div>
+          <div class="cartaz green"></div>
+          <div class="cartaz blue"></div>
+          <div class="cartaz red"></div>
+          <div class="cartaz green"></div>
+          <div class="cartaz blue"></div>
+          <div class="cartaz red"></div>
+          <div class="cartaz green"></div>
+          <div class="cartaz blue"></div>
+          <div class="cartaz red"></div>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <video src=" ./assets/video/liberdade01.mp4" class="video"></video>
+        <div class="controls">
+          <div class="video-bar-wrapper">
+            <div class="video-bar"></div>
+          </div>
+          <div class="buttons">
+            <button>
+              <i class="far fa-play-circle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Fim do Teatro -->
+
+  <script src="./js/carrocel.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="./js/script-index.js"></script>
+  <script src="./js/video.js"></script>
+
 </body>
 
 </html>
