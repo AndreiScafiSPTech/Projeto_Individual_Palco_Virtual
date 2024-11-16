@@ -5,9 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/estilo-index.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
   <title>Andrei Scafi de Vasconcelos</title>
 
@@ -15,319 +22,90 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav>
     <div class="logo">
-      <a href="#">
-        <span>A</span>ndrei<span>S</span>cafi
-      </a>
+      <img src="./assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
     </div>
-    <div class="nav-list">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#about-us" class="nav-link">Sobre mim</a>
-      <a href="simulador.html" class="nav-link">Quiz</a>
-      <a href="login.html" class="nav-link">Login</a>
-      <a href="cadastro.html" class="nav-link">Cadastro</a>
+    <div class="menu">
+      <a href="#home" class="item-menu">Home</a>
+      <a href="#sobremim" class="item-menu">Sobre mim</a>
+      <a href="#portifolio" class="item-menu">Portifólio</a>
+      <a href="#galerias" class="item-menu">Galeria</a>
+      <a href="#agradecimentos" class="item-menu">Agradecimentos</a>
+      <a href="#contato" class="item-menu">Contato</a>
+      <a href="" class="item-menu">Quiz</a>
+    </div>
+    <div class="login-cadastro">
+      <a href="login.html"><button class="btn login">Login</button></a>
+      <a href="cadastro.html"><button class="btn cadastro">Cadastro</button></a>
     </div>
   </nav>
 
-  <!-- End of Navbar -->
+  <!-- Fim da Navbar -->
 
-  <!-- Menu -->
-  <div class="menu">
-    <div class="line line-1"></div>
-    <div class="line line-2"></div>
-    <div class="line line-3"></div>
-  </div>
+  <!-- Home -->
 
-  <!-- End of Menu -->
+  <section class="home" id="home">
+    <div class="filtro-preto"></div>
+    <h3>
+      <i>
+        “Amai para entendê-las! <br>
+        Pois só quem ama pode ter ouvido <br>
+        Capaz de ouvir e de entender estrelas” <br>
+        <br>
+        Olavo Bilac
+      </i>
+    </h3>
+  </section>
 
-  <div class="container">
-    <!-- Section 1 -->
-    <section class="section-1" id="home">
-      <div class="banner">
-        <h1 class="banner-heading">
-          <span class="heading-1">Ator</span>
-          <span class="heading-2">Dublador</span>
-          <span class="heading-3">Locutor</span>
-          <span class="heading-4">Narrador</span>
-        </h1>
-        <p class="banner-paragraph">Andrei Scafi </p>
-        <a href="#pricing"><button class="banner-btn">Portifólio</button></a>
-      </div>
-      <div class="fotoPerfil">
-      </div>
-    </section>
-    <!-- End of Section 1 -->
+  <!-- Fim do Home -->
 
-    <!-- Section 2 -->
-    <section class="section-2" id="about-us">
-      <h1 class="section-heading">Sobre mim</h1>
-      <div class="section-heading-line"></div>
-      <div class="video-wrapper">
-        <video src="./assets/video//liberdade01.mp4" class="video"></video>
-        <div class="controls">
-          <div class="video-bar-wrapper">
-            <div class="video-bar"></div>
-          </div>
-          <div class="buttons">
-            <button>
-              <i class="far fa-play-circle"></i>
-            </button>
-          </div>
+  <!-- Sobre mim -->
+  <section class="sobre-mim" id="sobremim">
+    <div class="container">
+      <div class="perfil">
+        <div class="foto-perfil">
+          <img src="./assets/imgs/PI/fotos/fotoPerfil.png" alt="">
         </div>
-      </div>
-      <p class="section-2-paragraph">
-        <i class="fas fa-quote-left"></i>O teatro não mudou a minha vida. Ele salvou a minha vida! Sob a luz da ribalta
-        eu me encontrei. Após mergulhar nas águas profundas do palco, emergi uma nova pessoa. Mais confiante, mais
-        altivo e perceptivo. E o mais importante de tudo. Encontrei minha própria voz.
-        <i class="fas fa-quote-right"></i>
-      </p>
-    </section>
-    <!-- End of Section 2 -->
-
-    <!-- Section 3 -->
-    <section class="section-3" id="pricing">
-      <h1 class="section-heading">Portfólio</h1>
-      <div class="section-heading-line"></div>
-      <div class="swiper-container">
-        <div class="pricing-cards-wrapper swiper-wrapper">
-          <div class="pricing-card swiper-slide">
-            <div id="novick" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Novick Grand - TOG</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div id="noro" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Noro - TG</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div id="cdzOmega" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Irmão Marciano - CDZ</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div id="sidero" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Sidero - MHA</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div id="saito" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Saito Uebu - LLWUO</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div id="claymore" class="pricing-card-front">
-              <h1 class=" pricing-card-heading heading-free">Dublagem</h1>
-              <button class="pricing-card-btn btn-free">Yoma - Claymore</button>
-            </div>
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div class="pricing-card-front">
-              <h1 class="pricing-card-heading heading-basic">Locução</h1>
-              <h3 class="pricing-card-price">OCAA</h3>
-              <audio class="audiodisplay" controls>
-                <source src="./assets/audio/RibeiraoPreto_002.mp3" type="audio/mpeg"> Seu navegador não suporta a tag de
-                áudio.
-              </audio>
-              <button class="pricing-card-btn btn-basic">Sede - Ribeirão Preto</button>
-            </div>
-            <!--   <div class="pricing-card-back back-basic">
-                        <a href="#">Order Now</a>
-                    </div> -->
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div class="pricing-card-front">
-              <h1 class="pricing-card-heading heading-standard">Câmera</h1>
-              <h3 class="pricing-card-price">$699</h3>
-              <ul class="pricing-card-list list-standard">
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-              </ul>
-              <button class="pricing-card-btn btn-standard">Choose Plan</button>
-            </div>
-            <!-- <div class="pricing-card-back back-standard">
-                        <a href="#">Order Now</a>
-                    </div> -->
-          </div>
-          <div class="pricing-card swiper-slide">
-            <div class="pricing-card-front">
-              <h1 class="pricing-card-heading heading-premium">PREMIUM</h1>
-              <h3 class="pricing-card-price">$999</h3>
-              <ul class="pricing-card-list list-premium">
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-                <li>
-                  <i class="fas fa-check"></i>
-                  <span>Pricing Card Item</span>
-                </li>
-              </ul>
-              <button class="pricing-card-btn btn-premium">Choose Plan</button>
-            </div>
-            <!--   <div class="pricing-card-back back-premium">
-                        <a href="#">Order Now</a>
-                    </div> -->
-          </div>
-
+        <div class="titulo-dinamico">
+          <h2 id="ator" class="profissao">Ator</h2>
+          <h2 id="dublador" class="profissao">Dublador</h2>
+          <h2 id="locutor" class="profissao">Locutor</h2>
         </div>
+        <h3>Andrei Scafi</h3>
+      </div>
+      <div class="poema">
+        Sou apenas um homem de teatro. Sempre fui e sempre serei um homem de teatro. Quem é capaz de dedicar toda a vida
+        à humanidade e à paixão existentes nestes metros de tablado, esse é um homem de teatro. Nós achamos que é
+        preciso cantar – Agora, mais que nunca, é preciso cantar. Por isso,<br>
+        <br>
+        <i>
+          “Operário do canto, me apresento <br>
+          sem marca ou cicatriz, limpas as mãos, <br>
+          minha alma limpa, a face descoberta, <br>
+          aberto o peito, e – expresso documento - <br>
+          a palavra conforme o pensamento. <br>
+          Fui chamado a cantar e para tanto <br>
+          há um mar de som no búzio de meu canto. <br>
+          Trabalho à noite e sem revezamentos. <br>
+          Se há mais quem cante, cantaremos juntos; <br>
+          Sem se tornar com isso menos pura, <br>
+          A voz sobe uma oitava na mistura. <br>
+          Não canto onde não seja a boca livre, <br>
+          Onde não haja ouvidos limpos e almas <br>
+          afeitas a escutar sem preconceito. <br>
+          Para enganar o tempo – ou distrair <br>
+          criaturas já de si tão mal atentas, <br>
+          não canto... Canto apenas quando dança, <br>
+          nos olhos dos que me ouvem, a esperança”. <br>
+        </i>
+        <br>
+        -Adaptação do poema de Geir Campos-
+      </div>
+    </div>
+  </section>
+  <!-- Fim do sobre mim -->
 
-        <!-- Adicionando itens -->
-
-      </div>
-    </section>
-    <!-- End of Section 3 -->
-
-    <!-- Section 4 -->
-    <section class="section-4" id="contact">
-      <h1 class="section-heading">Contacto</h1>
-      <div class="section-heading-line"></div>
-      <div class="contact-wrapper">
-        <div class="contact-details">
-          <div class="phone">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h3>Whats app</h3>
-            <!--  <p><a href="5111996186049">(51) 11 9 9618 6049</a></p> -->
-          </div>
-          <div class="email">
-            <i class="far fa-envelope"></i>
-            <h3>Email</h3>
-            <!-- <p>andreiscafi@gmail.com</p> -->
-          </div>
-          <div class="address">
-            <i class="fa-brands fa-facebook"></i>
-            <h3>Facebook</h3>
-            <!--  <p><a href=""></a> </p> -->
-          </div>
-        </div>
-        <h1>Entre em contato</h1>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Your Email">
-          <textarea placeholder="Your Message"></textarea>
-          <input type="submit" value="Send Message">
-        </form>
-      </div>
-    </section>
-    <!-- End of Section 5 -->
-    <!-- Section 5 -->
-    <section class="section-4" id="contact">
-      <h1 class="section-heading">Contacto</h1>
-      <div class="section-heading-line"></div>
-      <div class="contact-wrapper">
-        <div class="contact-details">
-          <div class="phone">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h3>Whats app</h3>
-            <!--  <p><a href="5111996186049">(51) 11 9 9618 6049</a></p> -->
-          </div>
-          <div class="email">
-            <i class="far fa-envelope"></i>
-            <h3>Email</h3>
-            <!-- <p>andreiscafi@gmail.com</p> -->
-          </div>
-          <div class="address">
-            <i class="fa-brands fa-facebook"></i>
-            <h3>Facebook</h3>
-            <!--  <p><a href=""></a> </p> -->
-          </div>
-        </div>
-        <h1>Entre em contato</h1>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Your Email">
-          <textarea placeholder="Your Message"></textarea>
-          <input type="submit" value="Send Message">
-        </form>
-      </div>
-    </section>
-    <!-- End of Section 4 -->
-    <!-- Section 4 -->
-    <section class="section-4" id="contact">
-      <h1 class="section-heading">Contacto</h1>
-      <div class="section-heading-line"></div>
-      <div class="contact-wrapper">
-        <div class="contact-details">
-          <div class="phone">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h3>Whats app</h3>
-            <!--  <p><a href="5111996186049">(51) 11 9 9618 6049</a></p> -->
-          </div>
-          <div class="email">
-            <i class="far fa-envelope"></i>
-            <h3>Email</h3>
-            <!-- <p>andreiscafi@gmail.com</p> -->
-          </div>
-          <div class="address">
-            <i class="fa-brands fa-facebook"></i>
-            <h3>Facebook</h3>
-            <!--  <p><a href=""></a> </p> -->
-          </div>
-        </div>
-        <h1>Entre em contato</h1>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Your Email">
-          <textarea placeholder="Your Message"></textarea>
-          <input type="submit" value="Send Message">
-        </form>
-      </div>
-    </section>
-    <!-- End of Section 4 -->
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-nav">
-        <a href="#home">Home</a>
-        <a href="#about-us">About Us</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <p class="copyright">
-        Copyright &copy; CodeAndCreate All Rights Reserved
-      </p>
-    </footer>
-    <!-- End of Footer -->
-  </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="./js/script-index.js"></script>
