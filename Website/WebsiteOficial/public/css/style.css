@@ -33,6 +33,11 @@ section {
     width: 100%;
 }
 
+video {
+    width: 100%;
+    height: 100%;
+}
+
 /* Fim das Configurações Gerais */
 
 /* Barra de menu */
@@ -590,7 +595,6 @@ nav {
     height: 48rem;
     margin: 0 2rem;
     margin-bottom: 5rem;
-    background-color: rgba(255, 0, 0, 0.185);
     align-self: flex-end;
     display: flex;
     flex-wrap: wrap;
@@ -600,12 +604,75 @@ nav {
     width: 24rem;
     height: 23rem;
     margin: 0 2rem 2rem;
-    background-color: green;
+    transition: all .3s;
+    position: relative;
+    box-shadow: 0.5rem 0.5rem 1rem 1rem rgba(0, 0, 0, 0.7);
 }
 
-.personagem:hover {
-    opacity: .7;
+.novic {
+    background-image: url(../assets/imgs/PI/dublagem/novick.jpg);
+    background-size: cover;
+    background-position: top;
 }
+
+.noro {
+    background-image: url(../assets/imgs/PI/dublagem/noro.webp);
+    background-size: cover;
+    background-position: top;
+}
+
+.yoma {
+    background-image: url(../assets/imgs/PI/dublagem/claymore.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.uebu {
+    background-image: url(../assets/imgs/PI/dublagem/SaitoUebu.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.sidero {
+    background-image: url(../assets/imgs/PI/dublagem/sidero.png);
+    background-size: contain;
+    background-position: top;
+}
+
+.besouro {
+    background-image: url(../assets/imgs/PI/dublagem/cdzOmega.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.informacoes-dublagem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.informacoes-dublagem p {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 1rem;
+}
+
+
+.personagem:hover .informacoes-dublagem {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 
 .video-bar-2 {
     height: 100%;
@@ -760,6 +827,12 @@ nav {
     height: 70rem;
     transition: all .3s;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+.foto img {
+    height: 100%;
 }
 
 
