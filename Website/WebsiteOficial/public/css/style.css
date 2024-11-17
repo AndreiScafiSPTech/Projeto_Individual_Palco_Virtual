@@ -1,3 +1,13 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.fredericka-the-great-regular {
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 /* Configurações Gerais */
 * {
     margin: 0;
@@ -40,7 +50,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     animation: animateNavbar 1s .5s forwards;
 }
 
@@ -121,8 +131,12 @@ nav {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+}
+
+.claro {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .home h3 {
@@ -139,14 +153,18 @@ nav {
 /* Fim do Home */
 .sobre-mim {
     background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .sobre-mim .container {
-    height: 100%;
+    height: 80%;
     width: 100%;
     display: flex;
-    flex: wrap;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: center;
     z-index: 50;
 }
@@ -159,8 +177,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     color: white;
-    padding: 10rem 0;
-    margin: 0 10rem;
+    margin: 0 10rem 5rem;
 }
 
 .foto-perfil img {
@@ -251,6 +268,7 @@ nav {
 
 .poema {
     width: 50rem;
+    min-width: 50rem;
     height: 100%;
     color: white;
     display: flex;
@@ -258,8 +276,7 @@ nav {
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 2rem;
-    padding-top: 20rem;
-    margin: 0 10rem;
+    margin: 5rem 10rem 10rem;
 }
 
 /* Sobre mim */
@@ -270,7 +287,6 @@ nav {
     background-size: cover;
     display: flex;
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -292,7 +308,7 @@ nav {
     height: 65%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     z-index: 50;
 }
@@ -311,6 +327,7 @@ nav {
     width: 85rem;
     height: 48rem;
     margin: 0 2rem;
+    margin-bottom: 5rem;
 }
 
 .cartazes-container {
@@ -380,11 +397,14 @@ nav {
     opacity: 1;
 }
 
+.video-container {
+    margin: 0 2rem;
+}
+
 .video-wrapper {
     width: 85.4rem;
     height: 48rem;
-    margin: 0 2rem;
-    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7);
+    /* box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.7); */
     overflow: hidden;
     position: relative;
 }
@@ -441,10 +461,369 @@ nav {
     color: #fff;
 }
 
-/* video {
-    width: 85.4rem;
-    height: 48rem;
-    margin: 0 2rem;
-} */
+.video-container p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10rem;
+}
 
 /* Fim do Teatro */
+
+/* Dublagem */
+
+.dublagem {
+    background-image: url(../assets/imgs/PI/BG/BGDublagem.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.titulo {
+    width: 100%;
+    z-index: 100;
+}
+
+.dublagem .container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.personagens-dublados {
+    width: 85rem;
+    height: 48rem;
+    margin: 0 2rem;
+    margin-bottom: 5rem;
+    background-color: rgba(255, 0, 0, 0.185);
+    align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personagem {
+    width: 24rem;
+    height: 23rem;
+    margin: 0 2rem 2rem;
+    background-color: green;
+}
+
+.personagem:hover {
+    opacity: .7;
+}
+
+.video-bar-2 {
+    height: 100%;
+    width: 0;
+    background-color: #d30819;
+    transition: width 0.3s linear;
+}
+
+.buttons-2 {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.buttons-2 button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons-2 i {
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+/* Fim da dublagem */
+
+/* Locução */
+
+.locucao {
+    background-image: url(../assets/imgs/PI/BG/BGLocucao.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.locucao .container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.video-bar-3 {
+    height: 100%;
+    width: 0;
+    background-color: #d30819;
+    transition: width 0.3s linear;
+}
+
+.buttons-3 {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.buttons-3 button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons-3 i {
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.video-bar-4 {
+    height: 100%;
+    width: 0;
+    background-color: #d30819;
+    transition: width 0.3s linear;
+}
+
+.buttons-4 {
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.buttons-4 button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons-4 i {
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.video-container h3 {
+    color: white;
+    font-size: 3.4rem;
+    margin: 2rem 0 10rem;
+    text-align: center;
+}
+
+
+/* Fim da Locução */
+
+/* Galeria */
+.galeria {
+    background-image: url(../assets/imgs/PI/BG/BGGaleria.jpg);
+    background-size: cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.galeria .container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.carrocel-fotos-titulo {
+    color: white;
+    margin: 1rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.carrocel-fotos {
+    position: relative;
+    overflow: hidden;
+    /* padding: 0 2rem; */
+    width: 120rem;
+    height: 70rem;
+    margin: 0 2rem;
+    margin-bottom: 5rem;
+}
+
+.fotos-container {
+    /*  padding: 0 2rem; */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.fotos-container::-webkit-scrollbar {
+    display: none;
+}
+
+.foto {
+    flex: 0 0 auto;
+    width: 120rem;
+    height: 70rem;
+    transition: all .3s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pre-btn-fotos,
+.nxt-btn-fotos {
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    font-size: 5rem;
+    top: 50%;
+    translate: y(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9;
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+.pre-btn-fotos {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn-fotos {
+    right: 0;
+}
+
+.pre-btn-fotos:hover,
+.nxt-btn-fotos:hover {
+    opacity: 1;
+}
+
+.poema.itaca {
+    width: 100rem;
+}
+
+.itaca p {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+
+/* Fim da Galeria*/
+
+/* Agradecimentos*/
+
+.agradecimento {
+    background-image: url(../assets/imgs/PI/BG/BGAgradecimento.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.agradecimento .container {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.poema-brecht {
+    width: 90rem;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.poema-brecht p {
+    font-size: 2.6rem;
+    color: white;
+    font-family: "Fredericka the Great", serif;
+    letter-spacing: .1rem;
+    line-height: 3.6rem;
+}
+
+.mestres {
+    width: 90rem;
+    height: 90%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mestres p {
+    font-size: 2.6rem;
+    color: white;
+    font-family: "Fredericka the Great", serif;
+    letter-spacing: .1rem;
+    line-height: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.mestres-nomes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.nome {
+    width: 28rem;
+    height: 8rem;
+    margin: 0 2rem 1rem 0;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    color: white;
+    font-family: "Fredericka the Great", serif;
+    letter-spacing: .1rem;
+    line-height: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.nome h4 {
+    font-size: 2rem;
+    color: white;
+    font-family: "Fredericka the Great", serif;
+    letter-spacing: .2rem;
+    margin-top: 2rem;
+}
+
+.nome p {
+    font-size: 1.6rem;
+}
+
+/*Fim dos Agradecimentos*/
