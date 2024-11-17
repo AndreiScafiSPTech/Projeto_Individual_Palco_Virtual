@@ -347,10 +347,100 @@ nav {
     height: 40rem;
     margin-right: 2rem;
     transition: all .3s;
+    position: relative;
 }
 
-.cartaz:hover {
-    opacity: 0.7;
+.burundanga {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_burundanga.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.careca {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_cantora_careca.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.vale-negro {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_vale_negro.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.valentin {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_cabaré_valentin.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.maquina-brecth {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_maquina_brecht.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.liberdade-liberdade {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_liberdade_liberdadepng.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.estrelas {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_estrelas.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.salem {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_bruxas_salem-2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.opera {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_opera.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.estado-sitio {
+    background-image: url(../assets/imgs/PI/cartazes/cartaz_estado_sitio.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.informacoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 4rem 0 2rem 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.informacoes p {
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.informacoes h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.cartaz:hover .informacoes {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .red {
@@ -777,6 +867,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .mestres p {
