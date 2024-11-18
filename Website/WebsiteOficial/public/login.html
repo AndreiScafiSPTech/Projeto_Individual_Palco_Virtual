@@ -10,83 +10,86 @@
 
     <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <link rel="stylesheet" href="./css/estilo.css"> -->
     <link rel="icon" href="./assets/icon/favicon2.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
 
-    <!--Header-->
-
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="./assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
         </div>
-    </div>
+        <div class="menu">
+            <a href="index.html" class="item-menu">Home</a>
+            <a href="#sobremim" class="item-menu">Sobre mim</a>
+            <a href="#portifolio" class="item-menu">Portifólio</a>
+            <a href="#galeria" class="item-menu">Galeria</a>
+            <a href="#agradecimento" class="item-menu">Agradecimentos</a>
+            <a href="#contato" class="item-menu">Contato</a>
+            <a href="login.html" class="item-menu">Área Secreta</a>
+        </div>
+        <div class="login-cadastro">
+            <a href="login.html"><button class="btn login">Login</button></a>
+            <a href="cadastro.html"><button class="btn cadastro">Cadastro</button></a>
+        </div>
+    </nav>
+
+    <!-- Fim da Navbar -->
+
+    <!--Login-->
+
+    <section class="login-card">
 
 
-    <div class="login">
-        <div class="alerta_erro">
+        <!--    <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
             </div>
-        </div>
+        </div> -->
+
         <div class="container">
             <div class="card card-login">
-                <h2>Olá de volta!</h2>
+                <h2>Bem-vindo!</h2>
                 <div class="formulario">
                     <div class="campo">
-                        <span>E-mail:</span>
+                        <!-- id="email_input" -->
                         <input id="email_input" type="text" placeholder="Login">
+                        <span>E-mail</span>
                     </div>
                     <div class="campo">
-                        <span>Senha:</span>
                         <input id="senha_input" type="password" placeholder="******">
+                        <span>Senha</span>
                     </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
+                    <button class="btn entrar" onclick="entrar()">Entrar</button>
                 </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                <div id="div_aguardar" class="loading-div" style="display: none;">
+                    <!-- <img src="./assets/circle-loading.gif" id="loading-gif"> -->
                 </div>
 
                 <div id="div_erros_login"></div>
             </div>
         </div>
-    </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div>
-    <!--footer fim-->
-
+        <!-- Fim do login -->
+        <!--footer inicio-->
+        <footer>
+            <p>
+                © 2024 - Andrei Scafi de Vasconcelos
+            </p>
+        </footer>
+        <!--footer fim-->
+    </section>
 </body>
 
 </html>
 
 <script>
-
-
     function entrar() {
         aguardar();
 

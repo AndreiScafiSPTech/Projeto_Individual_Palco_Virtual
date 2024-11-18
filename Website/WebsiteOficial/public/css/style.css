@@ -991,3 +991,172 @@ nav {
 }
 
 /*Fim dos Agradecimentos*/
+
+/* Contato */
+
+
+.contato {
+    background-color: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contato .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.contato-item {
+    width: 20rem;
+    height: 40rem;
+    margin: 3rem;
+    color: white;
+    border: solid .5rem white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.contato-item:hover {
+    background-color: #d30819;
+}
+
+.contato-item i {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.contato-item p {
+    font-size: 2rem;
+}
+
+/* Fim do contato */
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #332C2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Fim do Footer */
+
+/* Login */
+.login-card {
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.card {
+    width: 60rem;
+    /*  margin: 12rem; */
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #d30819;
+}
+
+.formulario {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+input {
+    background-color: transparent;
+}
+
+.campo input {
+    width: 100%;
+    border: none;
+    border-bottom: solid #d30819 .2rem;
+    outline: none;
+    font-size: 2rem;
+    color: #332C2B;
+    text-align: right;
+    background-color: transparent;
+    height: 3rem;
+}
+
+input::placeholder {
+    font-size: 2rem;
+    color: #332C2B;
+}
+
+.campo span {
+    font-size: 1.6rem;
+}
+
+.entrar {
+    background-color: #d30819;
+    color: white;
+    border-color: white;
+    margin: 0 0 2rem 0;
+}
+
+.div_aguardar {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+
+.div_aguardar img {
+    width: 3rem;
+}
+
+
+/* Final Login */
