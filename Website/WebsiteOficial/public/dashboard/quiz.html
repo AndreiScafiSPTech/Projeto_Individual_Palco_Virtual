@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pesquisa</title>
+
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/quiz.css">
+        <script src="../js/sessao.js"></script>
+        <script src="./../js/alerta.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- scripts do Chart.js - 2022-1 -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!--FONT AWESOME-->
+        <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+    </head>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="../assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
+        </div>
+        <div class="titulo-quiz">
+            Descubra que tipo de Estrela você é...
+        </div>
+        <div class="menu">
+            <div class="btn-logout" onclick="limparSessao()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <!--  <h3>Sair</h3> -->
+            </div>
+        </div>
+
+
+        <!--      <div class="login-cadastro">
+        <a href="login.html"><button class="btn login">Login</button></a>
+        <a href="cadastro.html"><button class="btn cadastro">Cadastro</button></a>
+    </div> -->
+    </nav>
+
+    <!-- Fim da Navbar -->
+
+    <!--Login-->
+
+    <section class="login-card">
+
+
+        <!--    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div> -->
+
+        <div class="container">
+            <div class="pergunta-container">
+                <div class="pergunta">
+                    <h2>Qual é o seu ator favorito entre as opções?</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-1" value="1" class="input-radio" id="input-radio-1">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-1" value="2" class="input-radio" id="input-radio-2">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-1" value="3" class="input-radio" id="input-radio-3">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-1" value="4" class="input-radio" id="input-radio-4">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-1" value="5" class="input-radio" id="input-radio-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-next">
+                <i class="fa-solid fa-right-long"></i>
+                <p>Avançar</p>
+            </div>
+        </div>
+
+        <!-- Fim do login -->
+        <!--footer inicio-->
+        <footer>
+            <p>
+                © 2024 - Andrei Scafi de Vasconcelos
+            </p>
+        </footer>
+        <!--footer fim-->
+    </section>
+</body>
+
+</html>
