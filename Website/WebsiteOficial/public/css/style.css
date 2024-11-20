@@ -996,6 +996,9 @@ nav {
 
 /* Contato */
 
+section.contato {
+    min-height: 93vh;
+}
 
 .contato {
     background-color: #000;
@@ -1013,12 +1016,13 @@ nav {
     align-items: center;
     justify-content: center;
     z-index: 50;
+    padding-top: 8rem;
 }
 
 .contato-item {
     width: 20rem;
-    height: 40rem;
-    margin: 3rem;
+    height: 30rem;
+    margin: 2rem;
     color: white;
     border: solid .5rem white;
     border-radius: 2rem;
@@ -1064,7 +1068,6 @@ nav {
 
 /* Footer */
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 7vh;
@@ -1082,6 +1085,10 @@ footer p {
 /* Fim do Footer */
 
 /* Login */
+section.login-card {
+    min-height: 93vh;
+}
+
 .login-card {
     background-image: url(../assets/imgs/PI/BG/BGQuiz.jpg);
     position: relative;

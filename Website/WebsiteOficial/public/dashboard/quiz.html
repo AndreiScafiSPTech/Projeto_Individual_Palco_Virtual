@@ -56,7 +56,7 @@
 
     <!--Login-->
 
-    <section class="login-card">
+    <section class="login-card quiz">
 
 
         <!--    <div class="alerta_erro">
@@ -66,58 +66,429 @@
     </div> -->
 
         <div class="container">
-            <div class="pergunta-container">
+            <div class="circles">
+                <div class="circle active" onclick="circleButtonQuiz(0)"></div>
+                <div class="circle" onclick="circleButtonQuiz(1)"></div>
+                <div class="circle" onclick="circleButtonQuiz(2)"></div>
+                <div class="circle" onclick="circleButtonQuiz(3)"></div>
+                <div class="circle" onclick="circleButtonQuiz(4)"></div>
+                <div class="circle" onclick="circleButtonQuiz(5)"></div>
+                <div class="circle" onclick="circleButtonQuiz(6)"></div>
+                <div class="circle" onclick="circleButtonQuiz(7)"></div>
+                <div class="circle" onclick="circleButtonQuiz(8)"></div>
+                <div class="circle" onclick="circleButtonQuiz(9)"></div>
+                <div class="circle" onclick="circleButtonQuiz(10)"></div>
+            </div>
+            <div class="pergunta-container active">
+
                 <div class="pergunta">
-                    <h2>Qual é o seu ator favorito entre as opções?</h2>
+                    <h2>Pergunta-1</h2>
                 </div>
                 <div class="respostas-container">
                     <div class="resposta">
                         <p>All Pachino</p>
                         <div class="custom-radio">
-                            <input type="radio" name="pergunta-1" value="1" class="input-radio" id="input-radio-1">
+                            <input type="radio" name="pergunta-1" value="1" class="input-radio">
                         </div>
                     </div>
                     <div class="resposta">
                         <p>All Pachino</p>
                         <div class="custom-radio">
-                            <input type="radio" name="pergunta-1" value="2" class="input-radio" id="input-radio-2">
+                            <input type="radio" name="pergunta-1" value="2" class="input-radio">
                         </div>
                     </div>
                     <div class="resposta">
                         <p>All Pachino</p>
                         <div class="custom-radio">
-                            <input type="radio" name="pergunta-1" value="3" class="input-radio" id="input-radio-3">
+                            <input type="radio" name="pergunta-1" value="3" class="input-radio">
                         </div>
                     </div>
                     <div class="resposta">
                         <p>All Pachino</p>
                         <div class="custom-radio">
-                            <input type="radio" name="pergunta-1" value="4" class="input-radio" id="input-radio-4">
+                            <input type="radio" name="pergunta-1" value="4" class="input-radio">
                         </div>
                     </div>
                     <div class="resposta">
                         <p>All Pachino</p>
                         <div class="custom-radio">
-                            <input type="radio" name="pergunta-1" value="5" class="input-radio" id="input-radio-5">
+                            <input type="radio" name="pergunta-1" value="5" class="input-radio">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-2</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-2" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-2" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-2" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-2" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-2" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-3</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-3" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-3" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-3" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-3" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-3" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-4</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-4" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-4" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-4" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-4" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-4" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-5</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-5" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-5" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-5" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-5" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-5" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-6</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-6" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-6" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-6" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-6" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-6" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-7</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-7" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-7" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-7" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-7" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-7" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-8</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-8" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-8" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-8" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-8" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-8" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-9</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-9" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-9" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-9" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-9" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-9" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Pergunta-10</h2>
+                </div>
+                <div class="respostas-container">
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-10" value="1" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-10" value="2" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-10" value="3" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-10" value="4" class="input-radio">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>All Pachino</p>
+                        <div class="custom-radio">
+                            <input type="radio" name="pergunta-10" value="5" class="input-radio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pergunta-container">
+
+                <div class="pergunta">
+                    <h2>Finalizar teste</h2>
+                </div>
+                <div class="respostas-container">
+                    <button onclick="finalizarQuiz()">Finalizar Teste</button>
+                </div>
+            </div>
+            <div class="btn-prev">
+                <i class="fa-solid fa-left-long" onclick="changeSlideQuiz(-1)"></i>
+                <p>Voltar</p>
+            </div>
             <div class="btn-next">
-                <i class="fa-solid fa-right-long"></i>
+                <i class="fa-solid fa-right-long" onclick="changeSlideQuiz(1)"></i>
                 <p>Avançar</p>
             </div>
         </div>
 
         <!-- Fim do login -->
-        <!--footer inicio-->
-        <footer>
-            <p>
-                © 2024 - Andrei Scafi de Vasconcelos
-            </p>
-        </footer>
-        <!--footer fim-->
+
     </section>
+    <!--footer inicio-->
+    <footer>
+        <p>
+            © 2024 - Andrei Scafi de Vasconcelos
+        </p>
+    </footer>
+    <!--footer fim-->
 </body>
 
 </html>
+<script src="../js/quiz.js"></script>
