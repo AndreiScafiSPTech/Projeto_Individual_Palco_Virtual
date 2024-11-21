@@ -34,6 +34,10 @@
     cursor: pointer;
 }
 
+.checked {
+    background-color: rgba(0, 238, 0, 0.8);
+}
+
 .active.circle {
     background-color: white;
 }

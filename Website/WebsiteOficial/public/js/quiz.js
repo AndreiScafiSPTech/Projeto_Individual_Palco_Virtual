@@ -18,6 +18,8 @@ function changeSlideQuiz(direction) {
 
     slides[currentIndexQuiz].classList.add('active');
     slidesCircle[currentIndexQuiz].classList.add('active');
+
+    quizChecked()
 }
 
 function circleButtonQuiz(index) {
@@ -31,6 +33,24 @@ function circleButtonQuiz(index) {
 
     slides[currentIndexQuiz].classList.add('active');
     slidesCircle[currentIndexQuiz].classList.add('active');
+
+    quizChecked()
+}
+
+function quizChecked() {
+    const slidesCircle = document.querySelectorAll('.circle');
+    for (let i = 1; i <= 10; i++) {
+        const listaPergunta = document.querySelectorAll(`input[name="pergunta-${i}"]`);
+
+        for (let j = 0; j < listaPergunta.length; j++) {
+
+            if (listaPergunta[j].checked) {
+                slidesCircle[i - 1].classList.add('checked')
+            }
+        }
+
+    }
+
 }
 
 function finalizarQuiz() {
