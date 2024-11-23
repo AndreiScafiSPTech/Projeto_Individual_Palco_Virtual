@@ -45,7 +45,7 @@ function quizChecked() {
         for (let j = 0; j < listaPergunta.length; j++) {
 
             if (listaPergunta[j].checked) {
-                slidesCircle[i - 1].classList.add('checked')
+                slidesCircle[i].classList.add('checked')
             }
         }
 
@@ -65,341 +65,46 @@ function finalizarQuiz() {
     const pergunta_09 = document.querySelector('input[name="pergunta-9"]:checked').value;
     const pergunta_10 = document.querySelector('input[name="pergunta-10"]:checked').value;
 
+    var listaPerguntas = [pergunta_01, pergunta_02, pergunta_03, pergunta_04, pergunta_05, pergunta_06, pergunta_07, pergunta_08, pergunta_09, pergunta_10]
+
     var comico = 0;
     var dramatico = 0;
     var melodramatico = 0;
     var musical = 0;
     var improviso = 0;
 
-    /* Pergunta-01 */
-    if (pergunta_01 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_01 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico = 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_01 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_01 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_01 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-02 */
-    if (pergunta_02 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_02 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_02 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_02 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_02 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-03 */
-    if (pergunta_03 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_03 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_03 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_03 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_03 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-04 */
-    if (pergunta_04 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_04 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_04 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_04 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_04 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-05 */
-    if (pergunta_05 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_05 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_05 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_05 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_05 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-06 */
-    if (pergunta_06 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_06 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_06 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_06 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_06 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-07 */
-    if (pergunta_07 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_07 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_07 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_07 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_07 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-
-    /* Pergunta-08 */
-    if (pergunta_08 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_08 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_08 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_08 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_08 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-09 */
-    if (pergunta_09 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_09 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_09 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_09 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_09 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
-    }
-
-    /* Pergunta-10 */
-    if (pergunta_10 == 1) {
-        comico += 5;
-        dramatico += 4;
-        melodramatico += 3;
-        musical += 2;
-        improviso += 1;
-    } else if (pergunta_10 == 2) {
-        comico += 4;
-        dramatico += 3;
-        melodramatico += 2;
-        musical += 1;
-        improviso += 5;
-    } else if (pergunta_10 == 3) {
-        comico += 3;
-        dramatico += 2;
-        melodramatico += 1;
-        musical += 5;
-        improviso += 4;
-    } else if (pergunta_10 == 4) {
-        comico += 2;
-        dramatico += 1;
-        melodramatico += 5;
-        musical += 4;
-        improviso += 3;
-    } else if (pergunta_10 == 5) {
-        comico += 1;
-        dramatico += 5;
-        melodramatico += 4;
-        musical += 3;
-        improviso += 2;
+    for (let i = 0; i < listaPerguntas.length; i++) {
+        if (listaPerguntas[i] == 1) {
+            comico += 5;
+            dramatico += 2;
+            melodramatico += 3;
+            musical += 1;
+            improviso += 4;
+        } else if (listaPerguntas[i] == 2) {
+            comico += 1;
+            dramatico += 5;
+            melodramatico = 3;
+            musical += 2;
+            improviso += 4;
+        } else if (listaPerguntas[i] == 3) {
+            comico += 3;
+            dramatico += 4;
+            melodramatico += 5;
+            musical += 2;
+            improviso += 1;
+        } else if (listaPerguntas[i] == 4) {
+            comico += 3;
+            dramatico += 2;
+            melodramatico += 4;
+            musical += 5;
+            improviso += 1;
+        } else if (listaPerguntas[i] == 5) {
+            comico += 4;
+            dramatico += 3;
+            melodramatico += 2;
+            musical += 1;
+            improviso += 5;
+        }
     }
 
     /* console.log(pergunta_01, pergunta_02, pergunta_03, pergunta_04, pergunta_05, pergunta_06, pergunta_07, pergunta_08, pergunta_09, pergunta_10); */
