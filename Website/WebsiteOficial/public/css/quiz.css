@@ -1,3 +1,19 @@
+/* Header */
+.menu {
+    font-size: 2rem;
+    color: white;
+    margin: 0 3rem;
+}
+
+.item-menu {
+    margin: 0 1rem;
+    transition: all .3s;
+}
+
+.item-menu:hover {
+    color: #ff234fcc;
+}
+
 .btn-logout {
     display: flex;
     align-items: center;
@@ -10,6 +26,10 @@
     font-size: 4rem;
     color: white;
 }
+
+/*Fim do Header */
+
+/* Quiz */
 
 .quiz .container {
     flex-direction: column;
@@ -35,7 +55,7 @@
 }
 
 .checked {
-    background-color: rgba(0, 238, 0, 0.8);
+    background-color: rgba(80, 255, 80, 0.7);
 }
 
 .active.circle {
@@ -187,3 +207,51 @@
 .btn-prev:hover {
     color: white;
 }
+
+.btn-finalizar {
+    padding: .7rem 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border: solid .3rem white;
+    border-radius: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-finalizar:hover {
+    background-color: #ff234fcc;
+}
+
+/*Fim do Header */
+
+/* Dashboard */
+.dashboard-container {
+    width: 120rem;
+    height: 70rem;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.dashboard-container p {
+    color: white;
+    font-size: 3rem;
+}
+
+.grafico {
+    height: 60rem;
+    width: 80rem;
+    border: solid .5rem white;
+    border-radius: 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fim da Dashboard */

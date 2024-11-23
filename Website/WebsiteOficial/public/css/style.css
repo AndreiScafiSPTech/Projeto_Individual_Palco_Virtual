@@ -50,7 +50,7 @@ video {
 nav {
     width: 100%;
     height: 8rem;
-    background-color: hsla(7, 9%, 18%, 0.8);
+    background-color: #322b2acc;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,7 +82,7 @@ nav {
 }
 
 .item-menu:hover {
-    color: rgba(255, 35, 79, 0.8);
+    color: #ff234fcc;
 }
 
 .login-cadastro {
@@ -1036,23 +1036,23 @@ section.contato {
 }
 
 .youtube:hover {
-    background-color: hsla(2, 64%, 47%, 0.8);
+    background-color: #c5302bcc;
 }
 
 .facebook:hover {
-    background-color: hsla(221, 44%, 41%, 0.8);
+    background-color: #3b5897cc;
 }
 
 .whats:hover {
-    background-color: hsla(142, 70%, 49%, 0.8);
+    background-color: #25d466cc;
 }
 
 .email:hover {
-    background-color: hsla(46, 100%, 50%, 0.8);
+    background-color: #ffc400cc;
 }
 
 .instagram:hover {
-    background-color: hsla(326, 57%, 48%, 0.8);
+    background-color: #c03584cc;
 }
 
 .contato-item i {
@@ -1178,7 +1178,7 @@ input::placeholder {
 }
 
 .entrar:hover {
-    background-color: #d30819;
+    background-color: #ff234fcc;
 }
 
 .div_aguardar {

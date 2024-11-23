@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pesquisa</title>
+
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/quiz.css">
+        <script src="../js/sessao.js"></script>
+        <script src="./../js/alerta.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- scripts do Chart.js - 2022-1 -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+        <!--FONT AWESOME-->
+        <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+    </head>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="../assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
+        </div>
+        <!--   
+        <div class="titulo-quiz">
+            Descubra que tipo de Estrela você é...
+        </div> 
+        -->
+        <div class="menu">
+            <a href="" class="item-menu">Teste</a>
+            <a href="" class="item-menu">Resultado</a>
+            <a href="" class="item-menu">Mural</a>
+        </div>
+        <div class="menu">
+            <div class="btn-logout" onclick="limparSessao()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <!--  <h3>Sair</h3> -->
+            </div>
+        </div>
+
+
+        <!--      <div class="login-cadastro">
+        <a href="login.html"><button class="btn login">Login</button></a>
+        <a href="cadastro.html"><button class="btn cadastro">Cadastro</button></a>
+    </div> -->
+    </nav>
+
+    <!-- Fim da Navbar -->
+
+    <!--Login-->
+
+    <section class="login-card quiz">
+
+
+        <!--    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+    </div> -->
+
+        <div class="container">
+            <div class="dashboard-container">
+                <p>O seu perfil de artista é ????</p>
+                <div class="grafico">
+                    <canvas id="graficoRadar"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Fim do login -->
+
+    </section>
+    <!--footer inicio-->
+    <footer>
+        <p>
+            © 2024 - Andrei Scafi de Vasconcelos
+        </p>
+    </footer>
+    <!--footer fim-->
+</body>
+
+</html>
+<script src="../js/quiz.js"></script>
+<script>
+    var DataEPM = {
+        datasets: [{
+            label: 'Perfil Artítico',
+            data: [36, 31, 26, 26, 31],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }],
+        labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso']
+    }
+
+    var optionsEPM = {
+
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            r: {
+                grid: { color: 'white' },
+                ticks: {
+                    max: 50,
+                    min: 0,
+                    stepSize: 10,
+                    color: 'white'
+                },
+                pointLabels: {
+                    font: {
+                        size: 16
+                    },
+                    color: 'white'
+                }
+            }
+        }
+    }
+
+    const ctx = document.getElementById('graficoRadar').getContext('2d');
+    /* var resultadoChart = new Chart(ctx, { type: 'radar', data: DataEPM, options: optionsEPM });
+ */
+
+    const meuGraficoRadar = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
+            datasets: [{
+                label: 'Perfil Artístico',
+                data: [36, 31, 26, 26, 31],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    suggestedMin: 0,
+                    suggestedMax: 50,
+                    ticks: {
+                        beginAtZero: true,
+                        stepSize: 10,
+                        backgroundColor: 'none'
+                    },
+                    grid: {
+                        color: 'white',
+                        borderColor: 'red'
+                    },
+                    pointLabels: {
+                        font: {
+                            size: 16
+                        },
+                        color: 'white'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                    labels: {
+                        font: {
+                            color: 'white',
+                            size: 30
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
