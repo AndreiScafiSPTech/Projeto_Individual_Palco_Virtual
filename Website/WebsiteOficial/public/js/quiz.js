@@ -1,7 +1,13 @@
 // carrocel de slides Quiz.
 let currentIndexQuiz = 0;
 
+
 function changeSlideQuiz(direction) {
+    const btnLeft = document.getElementById('btn-left');
+    const btnRight = document.getElementById('btn-right');
+    btnLeft.classList.remove('disabled');
+    btnRight.classList.remove('disabled');
+
     const slides = document.querySelectorAll('.pergunta-container');
     slides[currentIndexQuiz].classList.remove('active');
 
@@ -9,6 +15,7 @@ function changeSlideQuiz(direction) {
     slidesCircle[currentIndexQuiz].classList.remove('active');
 
     currentIndexQuiz += direction;
+    console.log(currentIndexQuiz)
 
     if (currentIndexQuiz >= slides.length) {
         currentIndexQuiz = 0;
@@ -19,10 +26,22 @@ function changeSlideQuiz(direction) {
     slides[currentIndexQuiz].classList.add('active');
     slidesCircle[currentIndexQuiz].classList.add('active');
 
-    quizChecked()
+    quizChecked();
+
+    if (currentIndexQuiz >= slides.length - 1) {
+        btnRight.classList.add('disabled');
+    } else if (currentIndexQuiz <= 0) {
+        btnLeft.classList.add('disabled');
+    }
 }
 
+
 function circleButtonQuiz(index) {
+    const btnLeft = document.getElementById('btn-left');
+    const btnRight = document.getElementById('btn-right');
+    btnLeft.classList.remove('disabled');
+    btnRight.classList.remove('disabled');
+
     const slides = document.querySelectorAll('.pergunta-container');
     slides[currentIndexQuiz].classList.remove('active');
 
@@ -33,6 +52,12 @@ function circleButtonQuiz(index) {
 
     slides[currentIndexQuiz].classList.add('active');
     slidesCircle[currentIndexQuiz].classList.add('active');
+
+    if (currentIndexQuiz >= slides.length - 1) {
+        btnRight.classList.add('disabled');
+    } else if (currentIndexQuiz <= 0) {
+        btnLeft.classList.add('disabled');
+    }
 
     quizChecked()
 }
@@ -54,6 +79,18 @@ function quizChecked() {
 }
 
 function finalizarQuiz() {
+    const respostas = document.querySelectorAll(".input-radio")
+    var numeroPerguntas = 10;
+    for (let i = 0; i < respostas.length; i++) {
+        if (respostas[i].checked) {
+            numeroPerguntas--
+        }
+    }
+
+    if (numeroPerguntas != 0) {
+        return alert("Responda todas as perguntas antes de finalizar")
+    }
+
     const pergunta_01 = document.querySelector('input[name="pergunta-1"]:checked').value;
     const pergunta_02 = document.querySelector('input[name="pergunta-2"]:checked').value;
     const pergunta_03 = document.querySelector('input[name="pergunta-3"]:checked').value;
@@ -107,9 +144,13 @@ function finalizarQuiz() {
         }
     }
 
-    /* console.log(pergunta_01, pergunta_02, pergunta_03, pergunta_04, pergunta_05, pergunta_06, pergunta_07, pergunta_08, pergunta_09, pergunta_10); */
+    var pontuacao = []
+    pontuacao.push(comico);
+    pontuacao.push(dramatico);
+    pontuacao.push(melodramatico);
+    pontuacao.push(musical);
+    pontuacao.push(improviso);
 
-    /*  console.log(pergunta_01 + " cômico: " + comico + " dramático: " + dramatico + " melodramático: " + melodramatico + " musical: " + musical + " improviso: " + improviso) */
-
+    sessionStorage.PONTUACAO = pontuacao;
     console.log("total" + " cômico: " + comico + " dramático: " + dramatico + " melodramático: " + melodramatico + " musical: " + musical + " improviso: " + improviso)
 }

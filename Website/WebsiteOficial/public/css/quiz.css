@@ -3,6 +3,7 @@
     font-size: 3rem;
     color: white;
     margin: 0 3rem;
+    /* transform: translateX(-50%); */
 }
 
 .item-menu {
@@ -67,7 +68,7 @@
 }
 
 .pergunta-container {
-    width: 120rem;
+    width: 100rem;
     height: 70rem;
     background-color: rgba(0, 0, 0, .8);
     border-radius: 2rem;
@@ -171,10 +172,15 @@
     height: 6.7rem;
 }
 
+.disabled {
+    pointer-events: none;
+    opacity: 0;
+}
+
 .btn-next {
     position: absolute;
     color: rgba(255, 255, 255, 0.7);
-    right: 20rem;
+    right: 30rem;
     top: 60%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -201,7 +207,7 @@
 .btn-prev {
     position: absolute;
     color: rgba(255, 255, 255, 0.7);
-    left: 20rem;
+    left: 30rem;
     top: 60%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -226,7 +232,7 @@
 
 .btn-finalizar {
     padding: .7rem 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: transparent;
     border: solid .3rem white;
     border-radius: 3rem;

@@ -42,15 +42,15 @@
     <section class="login-card">
 
 
-        <!--    <div class="alerta_erro">
+        <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
             </div>
-        </div> -->
+        </div>
 
         <div class="container">
             <div class="card card-login">
-                <h2>Descubra sua Voz interior...</h2>
+                <h2>Bem vindo ao Palco Virtual!</h2>
                 <div class="formulario">
                     <div class="campo">
                         <!-- id="email_input" -->
@@ -88,7 +88,7 @@
 
 <script>
     function entrar() {
-        aguardar();
+        /* aguardar(); */
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -96,11 +96,11 @@
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            /* finalizarAguardar(); */
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            /* setInterval(sumirMensagem, 5000) */
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -120,19 +120,20 @@
 
             if (resposta.ok) {
                 console.log(resposta);
+                console.log("Entrei")
+
 
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.CPF_USUARIO = json.cpf;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.NOME_ARTISTICO = json.nomeArtistico;
+                    sessionStorage.PONTUACAO = json.pontuacao;
 
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
+                    window.location = "./dashboard/quiz.html";
+                    // apenas para exibir o loading
 
                 });
 
@@ -153,8 +154,8 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    /*  function sumirMensagem() {
+         cardErro.style.display = "none"
+     } */
 
 </script>
