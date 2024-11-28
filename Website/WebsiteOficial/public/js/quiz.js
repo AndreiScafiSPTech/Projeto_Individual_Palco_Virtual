@@ -78,6 +78,8 @@ function quizChecked() {
 
 }
 
+var pontuacaoGlobal;
+
 function finalizarQuiz() {
     const respostas = document.querySelectorAll(".input-radio")
     var numeroPerguntas = 10;
@@ -144,6 +146,7 @@ function finalizarQuiz() {
         }
     }
 
+    const perfil = ["Cômico", "Dramático", "Melodramático", "Musical", "Improviso"]
     var pontuacao = []
     pontuacao.push(comico);
     pontuacao.push(dramatico);
@@ -151,6 +154,108 @@ function finalizarQuiz() {
     pontuacao.push(musical);
     pontuacao.push(improviso);
 
-    sessionStorage.PONTUACAO = pontuacao;
-    console.log("total" + " cômico: " + comico + " dramático: " + dramatico + " melodramático: " + melodramatico + " musical: " + musical + " improviso: " + improviso)
+
+    var maiorPontuacao = 0;
+    var maiorPontuacaoIndice;
+
+    for (let i = 0; i < pontuacao.length; i++) {
+        if (pontuacao[i] > maiorPontuacao) {
+            maiorPontuacao = pontuacao[i];
+            maiorPontuacaoIndice = i;
+        }
+    }
+
+    pontuacaoGlobal = pontuacao;
+    sessionStorage.NOVOPERFIL = maiorPontuacaoIndice + 1;
+
+    console.log("total" + " cômico: " + comico + " dramático: " + dramatico + " melodramático: " + melodramatico + " musical: " + musical + " improviso: " + improviso);
+
+    if (sessionStorage.PERFIL == "null") {
+        cadastrarPontuacao();
+        sessionStorage.PERFIL = maiorPontuacaoIndice + 1;
+    } else {
+        atualizarPontuacao();
+    }
+}
+
+
+
+function cadastrarPontuacao() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var corpo = {
+        comico: pontuacaoGlobal[0],
+        dramatico: pontuacaoGlobal[1],
+        melodramatico: pontuacaoGlobal[2],
+        musical: pontuacaoGlobal[3],
+        improviso: pontuacaoGlobal[4],
+        fkPerfil: sessionStorage.NOVOPERFIL,
+        fkUsuario: sessionStorage.ID_USUARIO
+    }
+
+    fetch(`http://localhost:3333/quiz/cadastrar`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+            window.location = "/dashboard/resultado.html";
+            finalizarAguardar();
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+
+}
+
+function atualizarPontuacao() {
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var corpo = {
+        comico: pontuacaoGlobal[0],
+        dramatico: pontuacaoGlobal[1],
+        melodramatico: pontuacaoGlobal[2],
+        musical: pontuacaoGlobal[3],
+        improviso: pontuacaoGlobal[4],
+        fkPerfil: sessionStorage.NOVOPERFIL,
+        fkUsuario: sessionStorage.ID_USUARIO
+    }
+
+    fetch(`http://localhost:3333/quiz/atualizar`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
+            window.location = "/dashboard/resultado.html";
+            finalizarAguardar();
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+
 }

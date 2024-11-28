@@ -26,7 +26,7 @@ function autenticar(req, res) {
                             nome: resultadoAutenticar[0].nome,
                             senha: resultadoAutenticar[0].senha,
                             nomeArtistico: resultadoAutenticar[0].nomeArtistico,
-                            pontuacao: resultadoAutenticar[0].fkPontuacao
+                            perfil: resultadoAutenticar[0].fkPerfil
                         });
 
                     } else if (resultadoAutenticar.length == 0) {
