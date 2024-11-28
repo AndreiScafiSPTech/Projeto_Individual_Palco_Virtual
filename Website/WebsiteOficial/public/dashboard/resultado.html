@@ -33,7 +33,7 @@
     </head>
 </head>
 
-<body>
+<body onload="atualizarFeed()">
     <!-- Navbar -->
     <nav>
         <div class="logo">
@@ -102,90 +102,84 @@
 </html>
 <script src="../js/quiz.js"></script>
 <script>
-    var DataEPM = {
-        datasets: [{
-            label: 'Perfil Artítico',
-            data: [36, 31, 26, 26, 31],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
-        }],
-        labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso']
-    }
 
-    var optionsEPM = {
+    function atualizarFeed() {
+        var idUsuario = sessionStorage.ID_USUARIO;
 
-        plugins: {
-            legend: { display: false }
-        },
-        scales: {
-            r: {
-                grid: { color: 'white' },
-                ticks: {
-                    max: 50,
-                    min: 0,
-                    stepSize: 10,
-                    color: 'white'
-                },
-                pointLabels: {
-                    font: {
-                        size: 20
-                    },
-                    color: 'white'
+        fetch(`http://localhost:3333/resultado/listar/${idUsuario}`).then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
                 }
-            }
-        }
-    }
 
-    const ctx = document.getElementById('graficoRadar').getContext('2d');
-    /* var resultadoChart = new Chart(ctx, { type: 'radar', data: DataEPM, options: optionsEPM });
- */
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    console.log(resposta[0].comico)
 
-    const meuGraficoRadar = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
-            datasets: [{
-                label: 'Aptidão',
-                data: [36, 31, 26, 26, 31],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            scales: {
-                r: {
-                    suggestedMin: 0,
-                    suggestedMax: 50,
-                    ticks: {
-                        beginAtZero: true,
-                        stepSize: 10,
-                        backgroundColor: 'none'
-                    },
-                    grid: {
-                        color: 'white',
-                        borderColor: 'red'
-                    },
-                    pointLabels: {
-                        font: {
-                            size: 16
+                    const ctx = document.getElementById('graficoRadar').getContext('2d');
+
+                    const meuGraficoRadar = new Chart(ctx, {
+                        type: 'radar',
+                        data: {
+                            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
+                            datasets: [{
+                                label: 'Aptidão',
+                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 2
+                            }]
                         },
-                        color: 'white'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false,
-                    labels: {
-                        font: {
-                            color: 'white',
-                            size: 30
+                        options: {
+                            scales: {
+                                r: {
+                                    suggestedMin: 0,
+                                    suggestedMax: 50,
+                                    ticks: {
+                                        beginAtZero: true,
+                                        stepSize: 10,
+                                        backgroundColor: 'none'
+                                    },
+                                    grid: {
+                                        color: 'white',
+                                        borderColor: 'red'
+                                    },
+                                    pointLabels: {
+                                        font: {
+                                            size: 16
+                                        },
+                                        color: 'white'
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                    labels: {
+                                        font: {
+                                            color: 'white',
+                                            size: 30
+                                        }
+                                    }
+                                }
+                            }
                         }
-                    }
-                }
+                    });
+
+                    finalizarAguardar();
+                });
+            } else {
+                throw ('Houve um erro na API!');
             }
-        }
-    });
+        }).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
+
+
 </script>
