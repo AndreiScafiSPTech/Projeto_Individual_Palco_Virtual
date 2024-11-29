@@ -4,7 +4,7 @@
 <head>
 
     <head>
-        <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/imgs/PI/icons/theater_mask.png" type="image/x-icon">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +36,14 @@
 <body onload="atualizarFeed()">
     <!-- Navbar -->
     <nav>
-        <div class="logo">
-            <img src="../assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
+        <div class="logo-caixa">
+            <div class="logo">
+                <img src="../assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
+            </div>
+
+            <div class="titulo-quiz">
+                Olá <span id="b_usuario"></span>
+            </div>
         </div>
         <!--   
         <div class="titulo-quiz">
@@ -78,9 +84,17 @@
 
         <div class="container">
             <div class="dashboard-container">
-                <p>O seu perfil de artista é ????</p>
+                <p>O seu perfil de artista é <span id="span_perfil">????</span></p>
                 <div class="grafico">
                     <canvas id="graficoRadar"></canvas>
+                </div>
+                <div class="grafico-duplo">
+                    <div class="grafico2">
+                        <canvas id="graficoPizza"></canvas>
+                    </div>
+                    <div class="grafico2">
+                        <canvas id="graficoBarra"></canvas>
+                    </div>
                 </div>
 
             </div>
@@ -102,6 +116,7 @@
 </html>
 <script src="../js/quiz.js"></script>
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_ARTISTICO;
 
     function atualizarFeed() {
         var idUsuario = sessionStorage.ID_USUARIO;
@@ -119,6 +134,8 @@
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
                     console.log(resposta[0].comico)
+
+                    span_perfil.innerHTML = sessionStorage.PERFIL;
 
                     const ctx = document.getElementById('graficoRadar').getContext('2d');
 
@@ -169,6 +186,89 @@
                             }
                         }
                     });
+
+                    const ctx2 = document.getElementById('graficoPizza').getContext('2d');
+
+                    const meuGraficoPizza = new Chart(ctx2, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
+                            datasets: [{
+                                label: 'Aptidão',
+                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    labels: {
+                                        font: {
+                                            size: 8,
+                                            color: 'white'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+
+                    const ctx3 = document.getElementById('graficoBarra').getContext('2d');
+
+                    const meuGraficoBarra = new Chart(ctx3, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
+                            datasets: [{
+                                label: 'Aptidão',
+                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                    labels: {
+                                        font: {
+                                            size: 8,
+                                            color: 'white'
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+
 
                     finalizarAguardar();
                 });

@@ -250,7 +250,7 @@
 /* Dashboard */
 .dashboard-container {
     width: 100rem;
-    height: 70rem;
+    min-height: 70rem;
     background-color: rgba(0, 0, 0, .8);
     border-radius: 2rem;
     display: flex;
@@ -271,6 +271,24 @@
     border: solid .5rem white;
     border-radius: 2rem;
     margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafico-duplo {
+    display: flex;
+    justify-content: space-between;
+    width: 80rem;
+    border: solid .5rem white;
+    border-radius: 2rem;
+    padding: .5rem;
+}
+
+.grafico2 {
+    height: 30rem;
+    width: 40rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
