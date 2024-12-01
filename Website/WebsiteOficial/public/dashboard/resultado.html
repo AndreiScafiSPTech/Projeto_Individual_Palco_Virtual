@@ -51,16 +51,17 @@
         </div> 
         -->
         <div class="menu">
-            <a href="./quiz.html" class="item-menu">Teste</a>
-            <a href="" class="item-menu atual">Resultado</a>
-            <a href="" class="item-menu">Mural</a>
+            <a href="./quiz.html" class="item-menu ">Teste de Perfil</a>
+            <a href="./resultado.html" class="item-menu atual">Resultado</a>
+            <a href="./mural.html" class="item-menu">Mural</a>
+            <a class="item-menu" onclick="limparSessao()">Sair</a>
         </div>
-        <div class="menu">
+        <!--  <div class="menu">
             <div class="btn-logout" onclick="limparSessao()">
                 <i class="fa-solid fa-right-from-bracket"></i>
-                <!--  <h3>Sair</h3> -->
+                 <h3>Sair</h3>
             </div>
-        </div>
+        </div> -->
 
 
         <!--      <div class="login-cadastro">
@@ -84,19 +85,21 @@
 
         <div class="container">
             <div class="dashboard-container">
-                <p>O seu perfil de artista é <span id="span_perfil">????</span></p>
-                <div class="grafico">
-                    <canvas id="graficoRadar"></canvas>
-                </div>
-                <div class="grafico-duplo">
-                    <div class="grafico2">
-                        <canvas id="graficoPizza"></canvas>
+                <p>O seu Perfil de Artista é <span id="span_perfil">????</span></p>
+                <div class="graficos_container">
+                    <div class="grafico-duplo">
+                        <div class="grafico2">
+                            <canvas id="graficoPizza"></canvas>
+                        </div>
+                        <div class="grafico2">
+                            <canvas id="graficoBarra"></canvas>
+                        </div>
                     </div>
-                    <div class="grafico2">
-                        <canvas id="graficoBarra"></canvas>
+                    <div class="grafico">
+                        <canvas id="graficoRadar"></canvas>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
 
@@ -135,7 +138,7 @@
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
                     console.log(resposta[0].comico)
 
-                    span_perfil.innerHTML = sessionStorage.PERFIL;
+                    span_perfil.innerHTML = resposta[0].nome;
 
                     const ctx = document.getElementById('graficoRadar').getContext('2d');
 
@@ -216,7 +219,7 @@
                         options: {
                             plugins: {
                                 legend: {
-                                    display: true,
+                                    display: false,
                                     labels: {
                                         font: {
                                             size: 8,
@@ -260,13 +263,30 @@
                                     display: false,
                                     labels: {
                                         font: {
-                                            size: 8,
-                                            color: 'white'
-                                        }
+                                            size: 8
+                                        },
+                                        color: 'white'
+                                    }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    suggestedMin: 0,
+                                    suggestedMax: 50,
+                                    ticks: {
+                                        beginAtZero: true,
+                                        stepSize: 10,
+                                        color: 'white' // Ajuste a cor dos ticks do eixo Y
+                                    }
+                                },
+                                x: {
+                                    ticks: {
+                                        color: 'white' // Ajuste a cor dos ticks do eixo X
                                     }
                                 }
                             }
                         }
+
                     });
 
 

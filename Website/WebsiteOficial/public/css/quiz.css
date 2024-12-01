@@ -1,9 +1,10 @@
 /* Header */
 .menu {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     margin: 0 3rem;
     /* transform: translateX(-50%); */
+    cursor: pointer;
 }
 
 .item-menu {
@@ -249,7 +250,7 @@
 
 /* Dashboard */
 .dashboard-container {
-    width: 100rem;
+    width: 150rem;
     min-height: 70rem;
     background-color: rgba(0, 0, 0, .8);
     border-radius: 2rem;
@@ -263,6 +264,12 @@
 .dashboard-container p {
     color: white;
     font-size: 3rem;
+    margin: 2rem 0;
+}
+
+.graficos_container {
+    display: flex;
+    align-items: center;
 }
 
 .grafico {
@@ -278,20 +285,96 @@
 
 .grafico-duplo {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 80rem;
+    align-items: center;
+    width: 50rem;
+    height: 60rem;
     border: solid .5rem white;
     border-radius: 2rem;
-    padding: .5rem;
+    padding: 2rem 0;
 }
 
 .grafico2 {
     height: 30rem;
     width: 40rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Fim da Dashboard */
+
+/* MURAL */
+.avisos {
+    margin-top: 10vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.avisos h1 {
+    font-size: 4rem;
+}
+
+.div-form {
+    width: 120rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.div-form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-form label {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.div-form input {
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    border: solid .5rem white;
+    border-radius: 2rem;
+}
+
+.div-form textarea {
+
+    width: 100%;
+    border: solid .5rem white;
+    border-radius: 2rem;
+}
+
+.btn-publicar {
+    padding: .7rem 2rem;
+    font-size: 3rem;
+    background-color: transparent;
+    border: solid .3rem white;
+    border-radius: 3rem;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin: 2rem 0;
+}
+
+.btn-publicar:hover {
+    background-color: #ff234fcc;
+}
+
+/* Fim do MURAL */

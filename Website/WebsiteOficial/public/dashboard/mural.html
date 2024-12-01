@@ -6,10 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Avisos</title>
+    <title>Insights</title>
 
     <link rel="stylesheet" href="./../css/dashboards.css">
     <link rel="stylesheet" href="./../css/estilo.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quiz.css">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -19,79 +21,80 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<body onload="validarSessao(), atualizarFeed()">
 
-    <div class="janela">
-
-
-        <div class="header-left">
-
-            <h1>AquaTech</h1>
-
-            <div class="hello">
-                <div>
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                    <h3>CPF: <span id="b_cpf">cpf</span></h3>
-                </div>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-caixa">
+            <div class="logo">
+                <img src="../assets/imgs/PI/icons/theater_mask.png" alt="Máscaras de Teatro">
             </div>
 
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
-                </a>
+            <div class="titulo-quiz">
+                Olá <span id="b_usuario"></span>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
-            </div>
-
+        </div>
+        <div class="menu">
+            <a href="" class="item-menu atual">Teste de Perfil</a>
+            <a href="./resultado.html" class="item-menu">Resultado</a>
+            <a href="./mural.html" class="item-menu">Mural</a>
+            <a class="item-menu" onclick="limparSessao()">Sair</a>
+        </div>
+        <!--  <div class="menu">
             <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
+                <i class="fa-solid fa-right-from-bracket"></i>
+                 <h3>Sair</h3>
             </div>
+        </div> -->
 
+
+        <!--      <div class="login-cadastro">
+        <a href="login.html"><button class="btn login">Login</button></a>
+        <a href="cadastro.html"><button class="btn cadastro">Cadastro</button></a>
+    </div> -->
+    </nav>
+
+    <!-- Fim da Navbar -->
+
+
+
+    <div class="container">
+        <div class="avisos">
+            <h1>Publicar um Insight</h1>
+            <div class="div-form">
+                <form id="form_postagem" method="post" onsubmit="return publicar()">
+                    <label>
+                        Título:
+                        <br><br>
+                        <input name="titulo" id="titulo" maxlength="100" type="text">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        Descrição (máximo de 250 caracteres):
+                        <br><br>
+                        <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                    </label>
+                    <br>
+                    <br>
+                    <button class="btn-publicar">Enviar</button>
+                </form>
+            </div>
+            <h1>Mural de Avisos</h1>
+            <div class="div-results">
+                <div id="feed_container" class="feed-container">
+                </div>
+            </div>
         </div>
 
-        <div class="dash-right">
 
-
-            <div class="avisos">
-                <div id="alerta">
-                </div>
-                <div class="container">
-                    <h1>Publicar um aviso</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Título:
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
-                            <br>
-                            <br>
-                            <label>
-                                Descrição (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
-                            <br>
-                            <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <h1>Mural de Avisos</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
-                        </div>
-                    </div>
-                </div>
+        <!--    <div class="avisos">
+            <div id="alerta">
             </div>
-        </div>
+
+        </div> -->
+    </div>
+    </div>
     </div>
 
 
@@ -103,14 +106,14 @@
 
 <script>
 
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_ARTISTICO;
 
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
     }
 
     function publicar() {
-        var idUsuario = sessionStorage.ID_USUARIO;
+        var idUsuario = sessionStorage.NOME_ARTISTICO;
 
         var corpo = {
             titulo: form_postagem.titulo.value,
