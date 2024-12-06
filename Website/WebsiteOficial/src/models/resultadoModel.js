@@ -9,7 +9,9 @@ function listarPorUsuario(idUsuario) {
                             melodramatico, 
                             musical, 
                             improviso,
-                            nome
+                            nome,
+                            titulo,
+                            texto
                         from 
                             pontuacao 
                         join

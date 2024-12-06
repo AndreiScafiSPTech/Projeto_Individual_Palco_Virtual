@@ -118,19 +118,19 @@ function finalizarQuiz() {
             dramatico += 2;
             melodramatico += 3;
             musical += 1;
-            improviso += 4;
+            improviso += 3;
         } else if (listaPerguntas[i] == 2) {
             comico += 1;
             dramatico += 5;
-            melodramatico = 3;
+            melodramatico += 3;
             musical += 2;
-            improviso += 4;
+            improviso += 3;
         } else if (listaPerguntas[i] == 3) {
             comico += 3;
-            dramatico += 4;
+            dramatico += 3;
             melodramatico += 5;
-            musical += 2;
-            improviso += 1;
+            musical += 3;
+            improviso += 2;
         } else if (listaPerguntas[i] == 4) {
             comico += 3;
             dramatico += 2;
@@ -141,7 +141,7 @@ function finalizarQuiz() {
             comico += 4;
             dramatico += 3;
             melodramatico += 2;
-            musical += 1;
+            musical += 2;
             improviso += 5;
         }
     }
@@ -164,6 +164,13 @@ function finalizarQuiz() {
             maiorPontuacaoIndice = i;
         }
     }
+
+    for (let i = 0; i < pontuacao.length; i++) {
+        if (pontuacao[i] == maiorPontuacao && maiorPontuacaoIndice != i) {
+            pontuacao[maiorPontuacaoIndice] = pontuacao[maiorPontuacaoIndice] + 5
+        }
+    }
+
 
     pontuacaoGlobal = pontuacao;
     sessionStorage.NOVOPERFIL = maiorPontuacaoIndice + 1;

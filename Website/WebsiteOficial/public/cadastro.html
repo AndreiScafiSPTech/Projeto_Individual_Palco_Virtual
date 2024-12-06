@@ -121,7 +121,7 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "Mensagem de erro para todos os campos em branco";
 
       finalizarAguardar();
       return false;
@@ -135,7 +135,7 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Seu nome deve ter mais de 1 caracter.)";
+        "Seu nome deve ter mais de 1 caracter.";
 
       finalizarAguardar();
       return false;
@@ -145,7 +145,7 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Seu nome artítisco deve ter mais de 1 caracter.)";
+        "Seu nome artítisco deve ter mais de 1 caracter.";
 
       finalizarAguardar();
       return false;
@@ -155,17 +155,47 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(O e-mail deve conter '@'.)";
+        "O e-mail deve conter '@'.";
 
       finalizarAguardar();
       return false;
     } else if (
       // Validar o campo Senha do formulário
-      senhaVar.length < 6
+      senhaVar.length < 8
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Senha deve ter no mínimo 6 dígitos)";
+        "Senha deve ter no mínimo 8 dígitos";
+
+      finalizarAguardar();
+      return false;
+    } else if (
+      // Validar o campo Senha do formulário
+      senhaVar.search(/[A-Z]/g) == -1
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Senha deve ter no mínimo uma letra maiúscula";
+
+      finalizarAguardar();
+      return false;
+    } else if (
+      // Validar o campo Senha do formulário
+      senhaVar.search(/[a-z]/g) == -1
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Senha deve ter no mínimo uma letra minúscula";
+
+      finalizarAguardar();
+      return false;
+    } else if (
+      // Validar o campo Senha do formulário
+      senhaVar.search(/[!@#$%^&*)(+=._-]/g) == -1
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Senha deve ter no mínimo um caracter especial";
 
       finalizarAguardar();
       return false;
@@ -175,7 +205,7 @@
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(A senhas devem ser iguais.)";
+        "A senhas devem ser iguais.";
 
       finalizarAguardar();
       return false;

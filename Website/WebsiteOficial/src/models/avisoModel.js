@@ -9,7 +9,7 @@ function listar() {
             a.descricao,
             a.fkUsuario,
             u.idUsuario AS idUsuario,
-            u.nome,
+            u.nomeArtistico AS nome,
             u.email,
             u.senha
         FROM publicacao a
@@ -29,7 +29,7 @@ function pesquisarDescricao(texto) {
             a.descricao,
             a.fkUsuario,
             u.idUsuario AS idUsuario,
-            u.nome,
+            u.nomeArtistico AS nome,
             u.email,
             u.senha
         FROM publicacao a
@@ -50,7 +50,7 @@ function listarPorUsuario(idUsuario) {
             a.descricao,
             a.fkUsuario,
             u.id AS idUsuario,
-            u.nome,
+            u.nomeArtistico AS nome,
             u.email,
             u.senha
         FROM publicacao a

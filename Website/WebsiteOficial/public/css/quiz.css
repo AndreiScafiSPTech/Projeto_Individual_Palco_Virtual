@@ -303,6 +303,20 @@
     align-items: center;
 }
 
+.perfil_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.perfil_container p {
+    text-align: justify;
+}
+
+
+
 /* Fim da Dashboard */
 
 /* MURAL */
@@ -313,7 +327,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100rem;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 2rem;
+    padding: 2rem;
 
 }
 
@@ -322,8 +339,7 @@
 }
 
 .div-form {
-    width: 120rem;
-
+    width: 80rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -355,10 +371,12 @@
 }
 
 .div-form textarea {
-
     width: 100%;
     border: solid .5rem white;
     border-radius: 2rem;
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
 }
 
 .btn-publicar {
@@ -374,6 +392,66 @@
 }
 
 .btn-publicar:hover {
+    background-color: #ff234fcc;
+}
+
+hr {
+    background-color: white;
+    height: .3rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.div-results {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.publicacao {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border: 3px solid white;
+    padding: 2REM;
+    margin-top: 1rem;
+}
+
+.div-buttons {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 7rem;
+}
+
+.publicacao-nome {
+    font-size: 2.6rem;
+    margin-right: 10rem;
+}
+
+.publicacao-descricao {
+    margin-right: 1rem;
+}
+
+.publicacao-btn-editar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: .2rem solid white;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+.publicacao-btn-editar:hover {
     background-color: #ff234fcc;
 }
 

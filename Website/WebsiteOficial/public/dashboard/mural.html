@@ -15,13 +15,15 @@
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()">
+<body onload=" atualizarFeed()">
 
     <!-- Navbar -->
     <nav>
@@ -35,9 +37,9 @@
             </div>
         </div>
         <div class="menu">
-            <a href="" class="item-menu atual">Teste de Perfil</a>
+            <a href="./quiz.html" class="item-menu ">Teste de Perfil</a>
             <a href="./resultado.html" class="item-menu">Resultado</a>
-            <a href="./mural.html" class="item-menu">Mural</a>
+            <a href="./mural.html" class="item-menu atual">Mural</a>
             <a class="item-menu" onclick="limparSessao()">Sair</a>
         </div>
         <!--  <div class="menu">
@@ -56,49 +58,45 @@
 
     <!-- Fim da Navbar -->
 
+    <section class="login-card quiz">
 
-
-    <div class="container">
-        <div class="avisos">
-            <h1>Publicar um Insight</h1>
-            <div class="div-form">
-                <form id="form_postagem" method="post" onsubmit="return publicar()">
-                    <label>
-                        Título:
-                        <br><br>
-                        <input name="titulo" id="titulo" maxlength="100" type="text">
-                    </label>
-                    <br>
-                    <br>
-                    <label>
-                        Descrição (máximo de 250 caracteres):
-                        <br><br>
-                        <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                    </label>
-                    <br>
-                    <br>
-                    <button class="btn-publicar">Enviar</button>
-                </form>
-            </div>
-            <h1>Mural de Avisos</h1>
-            <div class="div-results">
-                <div id="feed_container" class="feed-container">
+        <div class="container">
+            <div class="avisos">
+                <h1>Publicar um Insight</h1>
+                <div class="div-form">
+                    <form id="form_postagem" method="post" onsubmit="return publicar()">
+                        <label>
+                            Título:
+                            <br><br>
+                            <input name="titulo" id="titulo" maxlength="100" type="text">
+                        </label>
+                        <br>
+                        <br>
+                        <label>
+                            Descrição (máximo de 250 caracteres):
+                            <br><br>
+                            <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                        </label>
+                        <br>
+                        <br>
+                        <button class="btn-publicar">Enviar</button>
+                    </form>
+                </div>
+                <h1>Insights</h1>
+                <hr>
+                <div class="div-results">
+                    <div id="feed_container" class="feed-container">
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-
-        <!--    <div class="avisos">
-            <div id="alerta">
-            </div>
-
-        </div> -->
-    </div>
-    </div>
-    </div>
-
-
-
+    <footer>
+        <p>
+            © 2024 - Andrei Scafi de Vasconcelos
+        </p>
+    </footer>
 
 </body>
 
@@ -113,7 +111,7 @@
     }
 
     function publicar() {
-        var idUsuario = sessionStorage.NOME_ARTISTICO;
+        var idUsuario = sessionStorage.ID_USUARIO;
 
         var corpo = {
             titulo: form_postagem.titulo.value,
@@ -210,11 +208,11 @@
 
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b> <hr>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
-                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML = "Editar";
-                        btnDeletar.innerHTML = "Deletar";
+                        divDescricao.innerHTML = "<b>" + publicacao.descricao + "</b>";
+                        btnEditar.innerHTML = '<i class="fa-solid fa-pen"></i>';
+                        btnDeletar.innerHTML = '<i class="fa-solid fa-trash"></i>';
 
                         divPublicacao.className = "publicacao";
                         spanTitulo.id = "inputNumero" + publicacao.idAviso;
@@ -232,7 +230,7 @@
                         btnDeletar.id = "btnDeletar" + publicacao.idAviso;
                         btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
 
-                        divPublicacao.appendChild(spanID);
+                        /*  divPublicacao.appendChild(spanID); */
                         divPublicacao.appendChild(spanNome);
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);

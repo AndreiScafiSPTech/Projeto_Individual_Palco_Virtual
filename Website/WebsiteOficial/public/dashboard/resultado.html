@@ -85,7 +85,7 @@
 
         <div class="container">
             <div class="dashboard-container">
-                <p>O seu Perfil de Artista é <span id="span_perfil">????</span></p>
+                <p><span id="span_perfil">Faça o Teste de Perfil para descobrir o qual é o seu talento!</span></p>
                 <div class="graficos_container">
                     <div class="grafico-duplo">
                         <div class="grafico2">
@@ -99,6 +99,10 @@
                         <canvas id="graficoRadar"></canvas>
                     </div>
 
+                </div>
+                <div class="perfil_container">
+                    <!-- <p><span id="perfil_titulo"></span></p> -->
+                    <p><span id="perfil_texto"></span></p>
                 </div>
             </div>
         </div>
@@ -138,7 +142,9 @@
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
                     console.log(resposta[0].comico)
 
-                    span_perfil.innerHTML = resposta[0].nome;
+                    span_perfil.innerHTML = `O seu Perfil de Artista é ${resposta[0].nome}`
+                    /* perfil_titulo.innerHTML = resposta[0].titulo */
+                    perfil_texto.innerHTML = resposta[0].texto
 
                     const ctx = document.getElementById('graficoRadar').getContext('2d');
 
