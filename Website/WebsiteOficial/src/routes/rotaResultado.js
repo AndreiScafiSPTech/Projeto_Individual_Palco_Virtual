@@ -13,4 +13,8 @@ router.get("/listar", function (req, res) {
     resultadoController.listarUsuarios(req, res);
 });
 
+router.get("/listarperfis", function (req, res) {
+    resultadoController.listarPerfis(req, res);
+});
+
 module.exports = router;

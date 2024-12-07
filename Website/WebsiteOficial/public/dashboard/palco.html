@@ -94,9 +94,8 @@
 
                 </div>
                 <hr>
-                <div class="perfil_container">
-                    <!-- <p><span id="perfil_titulo"></span></p> -->
-                    <p><span id="perfil_texto"></span></p>
+                <div class="lista_perfis" id="perfis_lista">
+
                 </div>
             </div>
 
@@ -118,6 +117,9 @@
 </html>
 <script src="../js/quiz.js"></script>
 <script>
+
+    atualizarFeed2()
+
     b_usuario.innerHTML = sessionStorage.NOME_ARTISTICO;
 
     function atualizarFeed() {
@@ -165,6 +167,18 @@
                         },
                         options: {
                             plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'Artistas por Perfil',
+                                    font: {
+                                        size: 20,
+                                    },
+                                    color: 'white',
+                                    padding: {
+                                        bottom: 60,
+                                        top: 0
+                                    }
+                                },
                                 legend: {
                                     display: false,
                                     labels: {
@@ -183,11 +197,17 @@
                                         beginAtZero: true,
                                         stepSize: 1,
                                         color: 'white' // Ajuste a cor dos ticks do eixo Y
+                                    },
+                                    grid: {
+                                        color: 'rgba(255,255,255,0.1)'
                                     }
                                 },
                                 x: {
                                     ticks: {
                                         color: 'white' // Ajuste a cor dos ticks do eixo X
+                                    },
+                                    grid: {
+                                        color: 'rgba(255,255,255,0.1)'
                                     }
                                 }
                             }
@@ -200,11 +220,113 @@
             } else {
                 throw ('Houve um erro na API!');
             }
-        }).catch(function (resposta) {
+        }
+
+        ).catch(function (resposta) {
             console.error(resposta);
             finalizarAguardar();
         });
     }
+
+    function atualizarFeed2() {
+
+        fetch(`http://localhost:3333/resultado/listarperfis`).then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    console.log(resposta[0])
+
+                    resposta.forEach(perfil => {
+                        perfis_lista.innerHTML += `
+                        <div class="perfil_container_usuario">
+                            
+                            <div class="perfil_usuario_texto">
+                                <h3>${perfil.nome}</h3>
+                                <p class="tipo_perfil">
+                                    Perfil: ${perfil.perfil}
+                                </p>
+                                <p>
+                                    Insight: ${perfil.descricao}
+                                </p>
+                            </div>
+
+                            <div class="perfil_usuario_grafico">
+                                <div class="grafico3">
+                                    <canvas id="graficoPizza${perfil.idUsuario}"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                                `;
+
+                        setTimeout(() => {
+                            const config = {
+                                type: 'pie',
+                                data: {
+                                    labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
+                                    datasets: [{
+                                        label: 'Aptidão',
+                                        data: [perfil.comico, perfil.dramatico, perfil.melodramatico, perfil.musical, perfil.improviso],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(54, 162, 235, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(153, 102, 255, 0.2)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            display: false,
+                                            labels: {
+                                                font: {
+                                                    size: 8,
+                                                    color: 'white'
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            let graficoPerfil = new Chart(document.getElementById(`graficoPizza${perfil.idUsuario}`), config);
+                        }, 0);
+                    });
+
+
+
+
+                    finalizarAguardar();
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }
+
+        ).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
+
 
 
 </script>
