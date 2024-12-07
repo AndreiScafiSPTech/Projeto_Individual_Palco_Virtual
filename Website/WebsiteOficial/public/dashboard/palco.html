@@ -287,7 +287,7 @@
 
                         setTimeout(() => {
                             const config = {
-                                type: 'pie',
+                                type: 'radar',
                                 data: {
                                     labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
                                     datasets: [{
@@ -319,6 +319,28 @@
                                                     size: 8,
                                                     color: 'white'
                                                 }
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        r: {
+                                            suggestedMin: 0,
+                                            suggestedMax: 50,
+                                            ticks: {
+                                                display: false,
+                                                beginAtZero: true,
+                                                stepSize: 10,
+                                                backgroundColor: 'none'
+                                            },
+                                            grid: {
+                                                color: 'rgba(255,255,255,.5)',
+                                                borderColor: 'red'
+                                            },
+                                            pointLabels: {
+                                                font: {
+                                                    size: 10
+                                                },
+                                                color: 'white'
                                             }
                                         }
                                     }
