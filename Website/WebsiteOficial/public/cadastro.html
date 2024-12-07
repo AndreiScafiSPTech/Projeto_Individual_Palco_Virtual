@@ -13,6 +13,7 @@
   <!-- <link rel="stylesheet" href="./css/estilo.css" /> -->
   <link rel="shortcut icon" href="../assets/imgs/PI/icons/theater_mask.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
 <body>
@@ -64,13 +65,24 @@
           </div>
           <div class="campo">
             <input id="senha_input" type="password" placeholder="******" />
-            <span>Senha</span>
+            <div class="olho">
+              <i id="senha_olho" onclick="mudarOlho()" class="fa-regular fa-eye-slash"></i>
+              <span>Senha</span>
+            </div>
           </div>
           <div class="campo">
             <input id="confirmacao_senha_input" type="password" placeholder="******" />
-            <span>Confirmação da Senha</span>
+            <div class="olho">
+              <i id="confirmacao_senha_olho" onclick="mudarOlhoConfirmacao()" class="fa-regular fa-eye-slash"></i>
+              <span>Confirmação de Senha</span>
+            </div>
           </div>
           <button class="btn entrar" onclick="cadastrar()">Cadastrar</button>
+
+          <p>
+            Já é cadastrado? <br>
+            Faça seu login <a href="login.html">aqui!</a>
+          </p>
         </div>
 
         <!--  <div id="div_aguardar" class="loading-div">
@@ -96,6 +108,39 @@
 </html>
 
 <script>
+
+  //olho
+
+  function mudarOlhoConfirmacao() {
+    var confirmacaoSenha = document.getElementById('confirmacao_senha_input');
+    var confirmacaoOlho = document.getElementById('confirmacao_senha_olho');
+
+    if (confirmacaoSenha.type == 'password') {
+      confirmacaoSenha.type = 'text'
+      confirmacaoOlho.classList.remove('fa-eye-slash')
+      confirmacaoOlho.classList.add('fa-eye')
+    } else {
+      confirmacaoSenha.type = 'password'
+      confirmacaoOlho.classList.remove('fa-eye')
+      confirmacaoOlho.classList.add('fa-eye-slash')
+    }
+  }
+
+  function mudarOlho() {
+    var senha = document.getElementById('senha_input');
+    var olho = document.getElementById('senha_olho');
+
+    if (senha.type == 'password') {
+      senha.type = 'text'
+      olho.classList.remove('fa-eye-slash')
+      olho.classList.add('fa-eye')
+    } else {
+      senha.type = 'password'
+      olho.classList.remove('fa-eye')
+      olho.classList.add('fa-eye-slash')
+    }
+
+  }
 
   // Array para armazenar empresas cadastradas para validação de código de ativação 
   let listaEmpresasCadastradas = [];
