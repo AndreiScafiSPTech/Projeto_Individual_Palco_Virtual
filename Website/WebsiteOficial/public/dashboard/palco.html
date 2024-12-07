@@ -51,9 +51,9 @@
         </div> 
         -->
         <div class="menu">
-            <a href="./palco.html" class="item-menu">Calçada da Fama</a>
+            <a href="./palco.html" class="item-menu atual">Calçada da Fama</a>
             <a href="./quiz.html" class="item-menu ">Teste de Perfil</a>
-            <a href="./resultado.html" class="item-menu atual">Resultado</a>
+            <a href="./resultado.html" class="item-menu">Resultado</a>
             <a href="./mural.html" class="item-menu">Mural</a>
             <a class="item-menu" onclick="limparSessao()">Sair</a>
         </div>
@@ -86,26 +86,20 @@
 
         <div class="container">
             <div class="dashboard-container">
-                <p><span id="span_perfil">Faça o Teste de Perfil para descobrir o qual é o seu talento!</span></p>
+                <p>Conheça nossos Artístas!</p>
                 <div class="graficos_container">
-                    <div class="grafico-duplo">
-                        <div class="grafico2">
-                            <canvas id="graficoPizza"></canvas>
-                        </div>
-                        <div class="grafico2">
-                            <canvas id="graficoBarra"></canvas>
-                        </div>
-                    </div>
-                    <div class="grafico">
-                        <canvas id="graficoRadar"></canvas>
+                    <div class="grafico_2">
+                        <canvas id="graficoBarra"></canvas>
                     </div>
 
                 </div>
+                <hr>
                 <div class="perfil_container">
                     <!-- <p><span id="perfil_titulo"></span></p> -->
                     <p><span id="perfil_texto"></span></p>
                 </div>
             </div>
+
         </div>
 
 
@@ -129,7 +123,7 @@
     function atualizarFeed() {
         var idUsuario = sessionStorage.ID_USUARIO;
 
-        fetch(`http://localhost:3333/resultado/listar/${idUsuario}`).then(function (resposta) {
+        fetch(`http://localhost:3333/resultado/listar`).then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
                     var feed = document.getElementById("feed_container");
@@ -141,102 +135,7 @@
 
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
-                    console.log(resposta[0].comico)
-
-                    span_perfil.innerHTML = `O seu Perfil de Artista é ${resposta[0].nome}`
-                    /* perfil_titulo.innerHTML = resposta[0].titulo */
-                    perfil_texto.innerHTML = resposta[0].texto
-
-                    const ctx = document.getElementById('graficoRadar').getContext('2d');
-
-                    const meuGraficoRadar = new Chart(ctx, {
-                        type: 'radar',
-                        data: {
-                            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
-                            datasets: [{
-                                label: 'Aptidão',
-                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
-                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                                borderColor: 'rgba(255, 99, 132, 1)',
-                                borderWidth: 2
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                r: {
-                                    suggestedMin: 0,
-                                    suggestedMax: 50,
-                                    ticks: {
-                                        beginAtZero: true,
-                                        stepSize: 10,
-                                        backgroundColor: 'none'
-                                    },
-                                    grid: {
-                                        color: 'white',
-                                        borderColor: 'red'
-                                    },
-                                    pointLabels: {
-                                        font: {
-                                            size: 16
-                                        },
-                                        color: 'white'
-                                    }
-                                }
-                            },
-                            plugins: {
-                                legend: {
-                                    display: false,
-                                    labels: {
-                                        font: {
-                                            color: 'white',
-                                            size: 30
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    });
-
-                    const ctx2 = document.getElementById('graficoPizza').getContext('2d');
-
-                    const meuGraficoPizza = new Chart(ctx2, {
-                        type: 'pie',
-                        data: {
-                            labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
-                            datasets: [{
-                                label: 'Aptidão',
-                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255, 99, 132, 1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            plugins: {
-                                legend: {
-                                    display: false,
-                                    labels: {
-                                        font: {
-                                            size: 8,
-                                            color: 'white'
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    });
+                    console.log(resposta[2].usuarios)
 
                     const ctx3 = document.getElementById('graficoBarra').getContext('2d');
 
@@ -246,7 +145,7 @@
                             labels: ['Cômico', 'Dramático', 'Melodramático', 'Musical', 'Improviso'],
                             datasets: [{
                                 label: 'Aptidão',
-                                data: [resposta[0].comico, resposta[0].dramatico, resposta[0].melodramatico, resposta[0].musical, resposta[0].improviso],
+                                data: [resposta[0].usuarios, resposta[1].usuarios, resposta[2].usuarios, resposta[3].usuarios, resposta[4].usuarios,],
                                 backgroundColor: [
                                     'rgba(255, 99, 132, 0.2)',
                                     'rgba(54, 162, 235, 0.2)',
@@ -279,10 +178,10 @@
                             scales: {
                                 y: {
                                     suggestedMin: 0,
-                                    suggestedMax: 50,
+                                    /* suggestedMax: 50, */
                                     ticks: {
                                         beginAtZero: true,
-                                        stepSize: 10,
+                                        stepSize: 1,
                                         color: 'white' // Ajuste a cor dos ticks do eixo Y
                                     }
                                 },
@@ -295,7 +194,6 @@
                         }
 
                     });
-
 
                     finalizarAguardar();
                 });

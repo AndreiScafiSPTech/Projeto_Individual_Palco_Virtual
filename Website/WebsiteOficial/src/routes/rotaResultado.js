@@ -9,4 +9,8 @@ router.get("/listar/:idUsuario", function (req, res) {
     resultadoController.listarPorUsuario(req, res);
 });
 
+router.get("/listar", function (req, res) {
+    resultadoController.listarUsuarios(req, res);
+});
+
 module.exports = router;

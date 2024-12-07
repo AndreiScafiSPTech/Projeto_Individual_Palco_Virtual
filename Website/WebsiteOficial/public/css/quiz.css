@@ -272,6 +272,17 @@
     align-items: center;
 }
 
+.grafico_2 {
+    height: 60rem;
+    width: 100rem;
+    border: solid .5rem white;
+    border-radius: 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .grafico {
     height: 60rem;
     width: 80rem;
