@@ -337,8 +337,36 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
+
+#numero_artistas {
+    margin-left: 1rem;
+}
+
+.kpis {
+    display: flex;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.kpis h2 {
+    display: flex;
+    align-items: center;
+}
+
+.kpis select {
+    height: 3rem;
+    border: none;
+    margin-left: 1rem;
+
+}
+
 
 .perfil_container_usuario {
     display: flex;
@@ -370,6 +398,11 @@
     margin: 1rem 0;
     justify-content: center;
     align-items: center;
+}
+
+
+.display-none {
+    display: none;
 }
 
 /* Fim Palco */

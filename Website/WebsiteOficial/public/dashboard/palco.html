@@ -95,6 +95,21 @@
                 </div>
                 <hr>
                 <div class="lista_perfis" id="perfis_lista">
+                    <div class="kpis">
+                        <h2>Artistas Cadastrados: <span id="numero_artistas"></span></h2>
+                        <h2>
+                            Filtrar por tipo de perfil:
+
+                            <select name="filtro" id="filtro_perfil" onchange="filtrarPerfil()">
+                                <option value="0">Todos</option>
+                                <option value="1">Cômico</option>
+                                <option value="2">Dramático</option>
+                                <option value="3">Melodramático</option>
+                                <option value="4">Musical</option>
+                                <option value="5">Improviso</option>
+                            </select>
+                        </h2>
+                    </div>
 
                 </div>
             </div>
@@ -250,8 +265,11 @@
 
                             <div class="perfil_usuario_texto">
                                 <h3>${perfil.nome}</h3>
-                                <p class="tipo_perfil">
-                                    Perfil: ${perfil.perfil}
+                                <p>
+                                    Perfil: <span class="tipo_perfil">${perfil.perfil}</span>
+                                </p>
+                                <p>
+                                    Contato: ${perfil.email}
                                 </p>
                                 <p>
                                     Insight: <span class="perfil_descrição">${perfil.descricao}</span>
@@ -312,7 +330,8 @@
                     });
 
 
-                    verificarTexto()
+                    verificarTexto();
+                    verificarNumeroArtistas()
 
                     finalizarAguardar();
                 });
@@ -339,5 +358,67 @@
 
         }
     }
+
+    function verificarNumeroArtistas() {
+        var listaUsuarios = document.querySelectorAll('.perfil_container_usuario');
+        var mostrarNumeroUsuarios = document.getElementById('numero_artistas');
+
+        mostrarNumeroUsuarios.innerText = listaUsuarios.length
+
+    }
+
+    function filtrarPerfil() {
+        var filtro = document.getElementById('filtro_perfil').value
+        var perfil = ''
+
+        if (filtro == 0) {
+            return mostrarPerfis()
+        }
+        if (filtro == 1) {
+            perfil = 'Cômico'
+        }
+        if (filtro == 2) {
+            perfil = 'Dramático'
+        }
+        if (filtro == 3) {
+            perfil = 'Melodramático'
+        }
+        if (filtro == 4) {
+            perfil = 'Musical'
+        }
+        if (filtro == 5) {
+            perfil = 'Improviso'
+        }
+
+
+        esconderPerfis(perfil)
+    }
+
+    function mostrarPerfis() {
+        var listaUsuarios = document.querySelectorAll('.perfil_container_usuario');
+        for (let i = 0; i < listaUsuarios.length; i++) {
+            listaUsuarios[i].classList.remove('display-none');
+            verificarNumeroArtistas();
+        }
+    }
+
+    function esconderPerfis(perfil) {
+        var listaUsuarios = document.querySelectorAll('.perfil_container_usuario');
+        var listaPerfis = document.querySelectorAll('.tipo_perfil');
+        var numeroArtistas = 0;
+
+        for (let i = 0; i < listaUsuarios.length; i++) {
+            listaUsuarios[i].classList.add('display-none');
+            if (listaPerfis[i].innerText == perfil) {
+                listaUsuarios[i].classList.remove('display-none');
+                numeroArtistas++
+            }
+        }
+
+        var mostrarNumeroUsuarios = document.getElementById('numero_artistas');
+
+        mostrarNumeroUsuarios.innerText = numeroArtistas
+    }
+
 
 </script>

@@ -51,6 +51,7 @@ function listarPerfis() {
                             idUsuario,
                             usuario.nomeArtistico as nome,
                             perfil.nome as perfil,
+                             usuario.email as email,
                             publicacao.titulo,
                             descricao,
                             comico, 
