@@ -247,14 +247,14 @@
                     resposta.forEach(perfil => {
                         perfis_lista.innerHTML += `
                         <div class="perfil_container_usuario">
-                            
+
                             <div class="perfil_usuario_texto">
                                 <h3>${perfil.nome}</h3>
                                 <p class="tipo_perfil">
                                     Perfil: ${perfil.perfil}
                                 </p>
                                 <p>
-                                    Insight: ${perfil.descricao}
+                                    Insight: <span class="perfil_descrição">${perfil.descricao}</span>
                                 </p>
                             </div>
 
@@ -312,7 +312,7 @@
                     });
 
 
-
+                    verificarTexto()
 
                     finalizarAguardar();
                 });
@@ -328,5 +328,16 @@
     }
 
 
+
+    function verificarTexto() {
+        var listaTexto = document.querySelectorAll('.perfil_descrição')
+
+        for (let i = 0; i < listaTexto.length; i++) {
+            if (listaTexto[i].innerText == 'null') {
+                listaTexto[i].innerText = 'Silêncio! Nada mais!'
+            }
+
+        }
+    }
 
 </script>
