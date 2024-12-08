@@ -1241,3 +1241,70 @@ input::placeholder {
 
 
 /* Final Login */
+/* Responsividade */
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 45%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 35%;
+    }
+
+    .sobre-mim {
+        justify-content: center;
+    }
+
+    .teatro {
+        justify-content: space-evenly;
+    }
+
+    .dublagem {
+        justify-content: space-evenly;
+    }
+
+    .locucao {
+        justify-content: space-evenly;
+    }
+
+    .agradecimento {
+        justify-content: space-evenly;
+    }
+
+    .contato {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 28%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 20%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 18%;
+    }
+
+}

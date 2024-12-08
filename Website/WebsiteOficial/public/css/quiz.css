@@ -544,3 +544,46 @@ hr {
 }
 
 /* Fim do MURAL */
+
+/* responsividade */
+@media (max-width: 1400px) {
+    html {
+        font-size: 55%;
+    }
+
+    .dashboard-container {
+        width: 110rem;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 45%;
+    }
+
+    .dashboard-container {
+        width: 100rem;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 35%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 28%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 20%;
+    }
+
+}
